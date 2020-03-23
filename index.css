@@ -32,7 +32,7 @@ header > h1 > img{
 }
 
 header .container {
-    background-image: bik.jpeg;
+    background-image: url(bik.jpeg);
     background-size: cover;
     background-position: center center;
     width: 100%;
