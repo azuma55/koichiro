@@ -4,19 +4,15 @@
  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Koichiro Azuma</title>
-<link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/normalize.css">
-<style type="text/css">
-    h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0 }
-    p { margin-top: 0; margin-bottom: 0 }
-</style>
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <!-- JavaScriptの読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="modal-multi.js"></script>
-    <script type="text/javascript" src="modal-fixed.js"></script>
-    <script type="text/javascript" src="background_full.js"></script>
+    <script src="js/modal-multi.js"></script>
+    <script type="text/javascript" src="js/modal-fixed.js"></script>
+    <script type="text/javascript" src="js/background_full.js"></script>
         
     <header>
         <div class="inner">
@@ -40,26 +36,6 @@
             </ul>
         </div>
         </div>
-        
-        <!-- <div class="nav_sp">
-            <a class="menu">
-                <span class="menu__line menu__line--top"></span>
-                <span class="menu__line menu__line--center"></span>
-                <span class="menu__line menu__line--bottom"></span>
-            </a>
-            <nav class="gnav">
-                <div class="gnav__wrap">
-                    <ul class="gnav__menu">
-                        <li class="gnav__menu__item"><a href="">HOME</a></li>
-                        <li class="gnav__menu__item"><a href="">ABOUT</a></li>
-                        <li class="gnav__menu__item"><a href="">NEWS</a></li>
-                        <li class="gnav__menu__item"><a href="">WORK</a></li>
-                        <li class="gnav__menu__item"><a href="">CONTACT</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="hero"></div>
-        </div> -->
 
         <div class="cp_fullscreenmenu">
             <input type="checkbox" id="menuToggle" />
@@ -84,18 +60,30 @@
     <!-- KV -->
     <div class="visual">
         <div class="visualimg src1">
-            <img src="img/anime02.png" alt="廻転する不在">
-        </div>
-        <div class="visualimg src2">
             <img src="img/anime01.png" alt="廻転する不在">
         </div>
+        <div class="visualimg src2">
+            <img src="img/anime02.png" alt="いつかこの自転車に乗りたい">
+        </div>
         <div class="visualimg src3">
-            <img src="img/anime03.png" alt="廻転する不在">
+            <img src="img/anime03.png" alt="他転車">
+        </div>
+    </div>
+
+    <div class="sp_visual">
+        <div class="visualimg src1">
+            <img src="img/sp_anime01.png" alt="廻転する不在">
+        </div>
+        <div class="visualimg src2">
+            <img src="img/sp_anime02.png" alt="いつかこの自転車に乗りたい">
+        </div>
+        <div class="visualimg src3">
+            <img src="img/sp_anime03.png" alt="他転車">
         </div>
     </div>
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" class="anchor">
         <h2><svg xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" width="141px" height="32px">
             <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
@@ -103,6 +91,7 @@
         </svg>
         </h2>
         <hr class="line">
+        <div class="content">
         <div class="column column_reverse">
             <div class="cnt_column">
                 <h2>東 弘一郎</h2>
@@ -135,20 +124,22 @@
                     d="M186.900,25.406 L175.638,7.701 L175.569,7.701 L175.569,25.406 L171.793,25.406 L171.793,0.489 L175.347,0.489 L186.627,18.195 L186.695,18.195 L186.695,0.489 L190.472,0.489 L190.472,25.406 L186.900,25.406 ZM163.665,21.134 C163.084,22.285 162.138,23.299 160.828,24.176 C159.506,25.088 157.854,25.566 155.872,25.612 C153.912,25.566 152.277,25.088 150.967,24.176 C149.634,23.299 148.665,22.285 148.062,21.134 C147.879,20.758 147.714,20.399 147.566,20.057 C147.429,19.704 147.315,19.260 147.224,18.724 C147.053,17.722 146.968,15.796 146.968,12.948 C146.968,10.054 147.053,8.117 147.224,7.137 C147.406,6.158 147.686,5.366 148.062,4.762 C148.665,3.611 149.634,2.586 150.967,1.686 C152.277,0.774 153.912,0.307 155.872,0.284 C157.854,0.307 159.506,0.774 160.828,1.686 C162.138,2.586 163.084,3.611 163.665,4.762 C164.086,5.366 164.377,6.158 164.536,7.137 C164.684,8.117 164.758,10.054 164.758,12.948 C164.758,15.796 164.684,17.722 164.536,18.724 C164.377,19.727 164.086,20.530 163.665,21.134 ZM160.725,7.941 C160.543,7.098 160.207,6.408 159.717,5.873 C159.341,5.360 158.839,4.933 158.213,4.591 C157.552,4.261 156.772,4.084 155.872,4.061 C154.983,4.084 154.220,4.261 153.582,4.591 C152.932,4.933 152.408,5.360 152.009,5.873 C151.519,6.408 151.195,7.098 151.035,7.941 C150.853,8.829 150.762,10.498 150.762,12.948 C150.762,15.398 150.853,17.055 151.035,17.921 C151.195,18.787 151.519,19.488 152.009,20.023 C152.408,20.536 152.932,20.952 153.582,21.271 C154.220,21.647 154.983,21.835 155.872,21.835 C156.772,21.835 157.552,21.647 158.213,21.271 C158.839,20.952 159.341,20.536 159.717,20.023 C160.207,19.488 160.543,18.787 160.725,17.921 C160.896,17.055 160.982,15.398 160.982,12.948 C160.982,10.498 160.896,8.829 160.725,7.941 ZM136.174,0.489 L139.951,0.489 L139.951,25.406 L136.174,25.406 L136.174,0.489 ZM124.064,25.406 L120.270,25.406 L120.270,3.856 L113.451,3.856 L113.451,0.489 L130.883,0.489 L130.883,3.856 L124.064,3.856 L124.064,25.406 ZM104.400,0.489 L108.177,0.489 L108.177,25.406 L104.400,25.406 L104.400,0.489 ZM96.871,14.725 C97.520,15.831 97.845,17.032 97.845,18.331 C97.822,20.485 97.150,22.188 95.828,23.441 C94.518,24.751 92.883,25.406 90.923,25.406 L80.430,25.406 L80.430,0.489 L90.086,0.489 C92.536,0.512 94.376,1.128 95.606,2.335 C96.848,3.554 97.469,5.166 97.469,7.172 C97.492,8.197 97.247,9.177 96.734,10.111 C96.472,10.555 96.096,10.977 95.606,11.376 C95.116,11.797 94.512,12.179 93.795,12.521 L93.795,12.589 C95.150,12.942 96.176,13.654 96.871,14.725 ZM92.701,4.864 C92.051,4.215 91.037,3.879 89.659,3.856 L84.207,3.856 L84.207,10.983 L89.659,10.983 C91.037,10.983 92.051,10.624 92.701,9.906 C93.361,9.245 93.692,8.414 93.692,7.411 C93.692,6.408 93.361,5.560 92.701,4.864 ZM93.094,15.460 C92.444,14.742 91.419,14.372 90.018,14.349 L84.207,14.349 L84.207,21.835 L90.018,21.835 C91.419,21.812 92.444,21.430 93.094,20.690 C93.743,19.961 94.068,19.095 94.068,18.092 C94.068,17.067 93.743,16.189 93.094,15.460 ZM68.782,0.489 L72.559,0.489 L72.559,25.406 L68.782,25.406 L68.782,0.489 ZM57.116,14.520 L47.255,14.520 L47.255,25.406 L43.479,25.406 L43.479,0.489 L47.255,0.489 L47.255,11.171 L57.116,11.171 L57.116,0.489 L60.893,0.489 L60.893,25.406 L57.116,25.406 L57.116,14.520 ZM34.291,25.406 L28.839,16.127 L23.371,25.406 L19.115,25.406 L26.737,12.640 L19.594,0.489 L23.866,0.489 L28.839,9.137 L33.813,0.489 L38.068,0.489 L30.942,12.640 L38.564,25.406 L34.291,25.406 ZM-0.001,0.489 L15.909,0.489 L15.909,4.061 L3.776,4.061 L3.776,11.171 L14.132,11.171 L14.132,14.520 L3.776,14.520 L3.776,21.835 L15.909,21.835 L15.909,25.406 L-0.001,25.406 L-0.001,0.489 Z"/></svg>
                 </h3>
                 <hr class="exhibition_line">
-                <p><span class="date">2020.03 :</span> 春のアート展 [GINZA SIX 6F 蔦屋銀座アトリウム]<br>
-                <span  class="date">2020.02 :</span> 第68回 東京藝術大学 卒業修了作品展 [東京藝術大学]<br>
-                <span class="date">2019.07 :</span> WIP展 2019 [東京藝術大学取手校地]<br>
-                <span class="date">2019.10 :</span> CAF Award 2019 [代官山ヒルサイドフォーラム]<br>
-                <span class="date">2018.12 :</span> 取手アートパス 2018 [東京藝術大学取手校地]<br>
-                <span class="date">2018.11 :</span> サイクルアートフェスティバル<br>
-                <span class="date">2018.11 :</span> COMITE COLBERT AWARD 2018 [東京藝術大学大学美術館]<br>
-                <span class="date">2018.10 :</span> 先端PRIZE展 [東京藝術大学取手校地]<br>
-                <span class="date">2018.02 :</span> Amateur Magician 展 [東京藝術大学取手校地]<br>
-                <span class="date">2017.12 :</span> 取手アートパス 2017 [東京藝術大学取手校地]<br>
-                <span class="date">2017.10 :</span> 藝大アーツイン丸の内「優美な屍骸」展 [新丸ビル]<br>
-                <span class="date">2016.12 :</span> 先端芸術表現科 成果発表展 ◯展 [東京藝術大学上野校地]
-                </p>
+                <ul>
+                    <li><span class="date">2020.03 :</span> 春のアート展 [GINZA SIX 6F 蔦屋銀座アトリウム]</li>
+                    <li><span  class="date">2020.02 :</span> 第68回 東京藝術大学 卒業修了作品展 [東京藝術大学]</li>
+                    <li><span class="date">2019.07 :</span> WIP展 2019 [東京藝術大学取手校地]</li>
+                    <li><span class="date">2019.10 :</span> CAF Award 2019 [代官山ヒルサイドフォーラム]</li>
+                    <li><span class="date">2018.12 :</span> 取手アートパス 2018 [東京藝術大学取手校地]</li>
+                    <li><span class="date">2018.11 :</span> サイクルアートフェスティバル</li>
+                    <li><span class="date">2018.11 :</span> COMITE COLBERT AWARD 2018 [東京藝術大学大学美術館]</li>
+                    <li><span class="date">2018.10 :</span> 先端PRIZE展 [東京藝術大学取手校地]</li>
+                    <li><span class="date">2018.02 :</span> Amateur Magician 展 [東京藝術大学取手校地]</li>
+                    <li><span class="date">2017.12 :</span> 取手アートパス 2017 [東京藝術大学取手校地]</li>
+                    <li><span class="date">2017.10 :</span> 藝大アーツイン丸の内「優美な屍骸」展 [新丸ビル]</li>
+                    <li><span class="date">2016.12 :</span> 先端芸術表現科 成果発表展 ◯展 [東京藝術大学上野校地]</li>
+                </ul>
             </div>
+
 
             <div class="award">
                 <h3><svg 
@@ -160,19 +151,20 @@
                    </svg>
                 </h3>
                 <hr class="award_line">
-                <p>
-                <span class="date">2020.02 :</span> LUMINE Meets Art AWARD 2019-2020  遠山正道氏 推薦作家<br>
-                <span class="date">2019.10 :</span> COMITE COLBERT AWARD 2019 ファイナリスト<br>
-                <span class="date">2019.10 :</span> CAF Award 2019 ファイナリスト<br>
-                <span class="date">2018.10 :</span> COMITE COLBERT AWARD 2018 ファイナリスト<br>
-                <span class="date">2018.05 :</span> 東京藝術大学 宮田亮平奨学金賞<br>
-                </p>
+                <ul>
+                    <li><span class="date">2020.02 :</span> LUMINE Meets Art AWARD 2019-2020  遠山正道氏 推薦作家</li>
+                    <li><span class="date">2019.10 :</span> COMITE COLBERT AWARD 2019 ファイナリスト</li>
+                    <li><span class="date">2019.10 :</span> CAF Award 2019 ファイナリスト</li>
+                    <li><span class="date">2018.10 :</span> COMITE COLBERT AWARD 2018 ファイナリスト</li>
+                    <li><span class="date">2018.05 :</span> 東京藝術大学 宮田亮平奨学金賞</li>
+                </ul>
             </div>
+        </div>
         </div>
     </section>
 
     <!-- NEWS -->
-    <section id="news">
+    <section id="news" class="anchor">
         <h2><svg 
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -218,7 +210,7 @@
     </section>
 
     <!-- WORK -->
-    <section id="work">
+    <section id="work" class="anchor">
         <h2><svg 
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -465,9 +457,13 @@
                 <hr class="title_line">
                 <img src="img/modal07_01.jpg">
                 <img src="img/modal07_02.jpg">
-                <p>ダミーテキスト
+                <p>《Tire Machine》は、オートバイのタイヤを回転させて、壁に向かって平行移動させることで、壁にタイヤ痕をつけるという作品です。<br>
+                    タイヤは、美術館の展示室の白い壁をガリガリと音を立てながら少しずつ削っていきます。一見大掛かりな装置ですが、この装置が生み出すのは小さなタイヤ痕にすぎません。<br>
+                    時間が経つにつれて凹みがどんどん深くなっていきます。<br>
+                    また、この作品はドローイング的な意味合いも含んでいますが、自分が普段描くドローイングとは明らかに違います。<br>
+                    同じ動作を延々と繰り返すことによって生まれる単調かつエンドレスなドローイングは、人間が生み出した技術が私たちの手を離れて独り歩きをはじめてしまうような、不気味さも感じさせるのです。<br>
                 </p>
-                <p>ダミーテキスト</p>
+                <p>《TIRE MACHINE》装置 2018年 タイヤ, モーター,鉄</p>
                 <p><a class="button-link"><svg 
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -496,9 +492,13 @@
                 <hr class="title_line">
                 <img src="img/modal08_01.jpg">
                 <img src="img/modal08_02.jpg">
-                <p>ダミーテキスト
+                <p>《Bicycle》では、金属製のローラーにワイヤブラシが接触することで通電し白熱電球が点灯しますが、機械仕掛けで定期的に回転する自転車の車輪の運動により、その点灯は妨げられます。<br>
+                    接触した際に発生する火花は、大掛かりな装置によって生み出されて、すぐに消えてしまうような「小さな宇宙」であると感じています。<br>
+                    展示会場にカラカラと響く回転音に反比例して点滅する白熱電球は、予測不能な振動によってまるで呼吸し「生きている」かのように感じられます。<br>
+                    また、コンピュータ上で起こるバグは、正確に動くような設計をしたにもかかわらず発生してしまう、正確さの中のエラーです。<br>
+                    この作品は、現実世界の中で、正確に量産された既製品を組み合わせながらも、バグを再現する試みとしての意味合いも持っています。<br>
                 </p>
-                <p>ダミーテキスト</p>
+                <p>《BICYCLE》 インスタレーション 2017年  自転車,モーター,電球</p>
                 <p><a class="button-link"><svg 
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -544,7 +544,7 @@
 
             <!-- コンテンツ画像_PC版 -->
             <div class="work_contents">
-                <a class="modal-syncer button-link" data-target="modal-content-01">
+                <a class="modal-syncer button-link-pc" data-target="modal-content-01">
                 <img class="pc" src="img/work01.png" alt="いつかこの自転車に乗りたい">
                 <div class="mask">
                     <div class="caption">いつかこの自転車に乗りたい</div>
@@ -552,7 +552,7 @@
                 </a>
             </div>
             <div class="work_contents">
-                <a class="modal-syncer button-link" data-target="modal-content-02">
+                <a class="modal-syncer button-link-pc" data-target="modal-content-02">
                 <img class="pc" src="img/work02.png" alt="廻転する不在">
                 <div class="mask">
                     <div class="caption">廻転する不在</div>
@@ -560,7 +560,7 @@
                 </a>
             </div>
             <div class="work_contents">
-                <a class="modal-syncer button-link" data-target="modal-content-03">
+                <a class="modal-syncer button-link-pc" data-target="modal-content-03">
                 <img class="pc" src="img/work03.png" alt="自浮車">
                 <div class="mask">
                     <div class="caption">自浮車</div>
@@ -568,7 +568,7 @@
                 </a>
             </div>
             <div class="work_contents">
-                <a class="modal-syncer button-link" data-target="modal-content-04">
+                <a class="modal-syncer button-link-pc" data-target="modal-content-04">
                 <img class="pc" src="img/work04.png" alt="■転車">
                 <div class="mask">
                     <div class="caption">■転車</div>
@@ -576,7 +576,7 @@
                 </a>
             </div>
             <div class="work_contents">
-                <a class="modal-syncer button-link" data-target="modal-content-05">
+                <a class="modal-syncer button-link-pc" data-target="modal-content-05">
                 <img class="pc" src="img/work05.png" alt="他転車">
                 <div class="mask">
                     <div class="caption">他転車</div>
@@ -584,7 +584,7 @@
                 </a>
             </div>
             <div class="work_contents">
-                <a class="modal-syncer button-link" data-target="modal-content-06">
+                <a class="modal-syncer button-link-pc" data-target="modal-content-06">
                 <img class="pc" src="img/work06.png" alt="自転転転転転車">
                 <div class="mask">
                     <div class="caption">自転転転転転車</div>
@@ -592,7 +592,7 @@
                 </a>
             </div>
             <div class="work_contents">
-                <a class="modal-syncer button-link" data-target="modal-content-07">
+                <a class="modal-syncer button-link-pc" data-target="modal-content-07">
                     <img class="pc" src="img/work07.png" alt="TIRE MACHINE">
                     <div class="mask">
                         <div class="caption">TIRE MACHINE</div>
@@ -600,7 +600,7 @@
                     </a>
             </div>
             <div class="work_contents">
-                <a class="modal-syncer button-link" data-target="modal-content-08">
+                <a class="modal-syncer button-link-pc" data-target="modal-content-08">
                     <img class="pc" src="img/work08.png" alt="BICYCLE">
                     <div class="mask">
                         <div class="caption">BICYCLE</div>
@@ -608,7 +608,7 @@
                     </a>
             </div>
             <div class="work_contents">
-                <a class="modal-syncer button-link" data-target="modal-content-09">
+                <a class="modal-syncer button-link-pc" data-target="modal-content-09">
                     <img class="pc" src="img/work09.png" alt="INAZUMA">
                     <div class="mask">
                         <div class="caption">INAZUMA</div>
@@ -618,7 +618,8 @@
 
             <!-- コンテンツ画像_SP版 -->
             <div class="work_contents">
-                <a class="modal-syncer button-link" data-target="modal-content-01"><img class="sp" src="img/sp_work01.png" alt="タイトル未定"></a>
+                <a class="modal-syncer button-link" data-target="modal-content-01">
+                    <img class="sp" src="img/sp_work01.png" alt="タイトル未定"></a>
             </div>
             <div class="work_contents">
                 <a class="modal-syncer button-link" data-target="modal-content-02"><img class="sp" src="img/sp_work02.png" alt="廻転する不在"></a>
@@ -650,7 +651,7 @@
     
 
         <!-- CONTACT -->
-        <section id="contact">
+        <section id="contact" class="anchor">
             <h2><svg 
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
