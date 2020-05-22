@@ -15,11 +15,16 @@ body.fixed {
 	height: 100%;
 	left: 0;
 }
+h1{
+    margin: 0;
+}
 h2 {
     margin: 0;
     font-size: 4.8rem;
+    padding-left: 3.5rem;
 }
 h3 {
+    margin: 0;
     text-align: center;
     color: #d8d8d8;
 }
@@ -41,16 +46,23 @@ ul {
     border: none;
     text-align: left;
     width: 32%;
-    margin: 3rem -6rem 7rem;
+    margin: 3rem 0 7rem;
 }
 section {
-    margin: 0 7rem 14rem;
+    margin-bottom:14rem;
 }
 .all_container {
     background-color:#000;
     color: #ffffff;
     height: auto;
 }
+
+.anchor{
+        display: block;
+        padding-top: 10rem;
+        margin-top: -10rem;
+}
+
 header {
     align-items: center;
     background: #000000;
@@ -82,7 +94,7 @@ header .logo-img img{
     margin-right: 2.5rem;
 }
 .nav-global ul{
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 .nav-global li {
     margin-right: 37px;
@@ -92,14 +104,32 @@ header .logo-img img{
     margin-right: 0;
 }
 .nav-global a {
+    position: relative;
+    display: inline-block;
     color: #fff;
     text-decoration: none;
+}
+.nav-global a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform .1.5s;
+}
+.nav-global a:hover::after {
+    transform-origin: left top;
+    transform: scale(1, 1);
 }
 .nav-global img{
     width: 80%;
 }
 .nav-global .sns li{
-    margin-right: 13px;
+    margin-right: 1rem;
 }
 header .nav_sp {
     display: none;
@@ -107,158 +137,158 @@ header .nav_sp {
 
 /** ハンバーガー用  **/
 header .cp_fullscreenmenu{
-    display: none;
+display: none;
 }
 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    }
-    a,
-    a:visited,
-    a:hover,
-    a:active {
-    text-decoration: none;
-    color: inherit;
-    }
-    input {
-    display: none;
-    }
-    .cp_fullscreenmenu {
-    position: fixed;
-    z-index: 1;
-    top: 1.5rem;
-    right: 1rem;
-    }
-    /*menuコンテンツ*/
-    .cp_fullscreenmenu .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000000;
-    }
-    .cp_fullscreenmenu .menu label {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    background-size: 100%;
-    }
-    .cp_fullscreenmenu .menu .menucont {
-    font-size: 5vw;
-    position: relative;
-    top: 50%;
-    margin-top: -170px;
-    padding-bottom: 20px;
-    text-align: center;
-    }
-    .cp_fullscreenmenu .menu ul {
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-    }
-    .cp_fullscreenmenu .menu ul li,
-    .cp_fullscreenmenu .menu ul li a {
-    transition: all 0.3s ease;
-    }
-    .cp_fullscreenmenu .menu ul li a {
-    display: block;
-    padding: 3rem 0;
-    color: #ffffff;
-    }
-    .cp_fullscreenmenu .menu ul li a:hover {
-    color: #000000;
-    }
-    .cp_fullscreenmenu .menu ul li:hover {
-    background: #ffffff;
-    }
-    /*クリックしたらメニューが開閉の動作*/
-    .cp_fullscreenmenu .menuEffects {
-    visibility: hidden;
-    transition: opacity 0.5s, visibility 0.5s;
-    opacity: 0;
-    }
-    .cp_fullscreenmenu .menuEffects ul {
-    transition: all 0.5s;
-    transform: translateY(0%);
-    }
-    .cp_fullscreenmenu #menuToggle:checked ~ .menuEffects {
-    visibility: visible;
-    transition: opacity 0.5s;
-    opacity: 0.7;
-    }
-    .cp_fullscreenmenu #menuToggle:checked ~ .menuEffects ul {
-    opacity: 1;
-    }
-    .cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open {
-    background-color: transparent;
-    }
-    .cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:before {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    content: '';
-    transform: rotate(45deg);
-    background-color: #ffffff;
-    }
-    .cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:after {
-    position: relative;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    content: '';
-    transform: rotate(-45deg);
-    background-color: #ffffff;
-    }
-    .cp_fullscreenmenu #menuToggle:not(:checked) ~ .menuEffects ul {
-    transform: translateY(-30%);
-    }
-    /*ハンバーガー*/
-    .cp_fullscreenmenu .hamburger {
-    position: relative;
-    top: 0;
-    right: 0;
-    display: block;
-    width: 50px;
-    height: 50px;
-    padding: 15px;
-    cursor: pointer;
-    z-index: 100;
-    }
-    .cp_fullscreenmenu .hamburger:hover .open:before {
-    top: -9px;
-    }
-    .cp_fullscreenmenu .hamburger:hover .open:after {
-    top: 5px;
-    }
-    .cp_fullscreenmenu .open,
-    .cp_fullscreenmenu .open:before,
-    .cp_fullscreenmenu .open:after {
-    position: relative;
-    display: block;
-    width: 24px;
-    height: 4px;
-    border-radius: 2px;
-    background-color: #ffffff;
-    transition: all 0.3s ease;
-    }
-    .cp_fullscreenmenu .open {
-    top: 8px;
-    cursor: pointer;
-    }
-    .cp_fullscreenmenu .open:before {
-    top: -8px;
-    content: '';
-    transform: rotate(0deg);
-    }
-    .cp_fullscreenmenu .open:after {
-    top: 4px;
-    content: '';
-    }
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+text-decoration: none;
+color: inherit;
+}
+input {
+display: none;
+}
+.cp_fullscreenmenu {
+position: fixed;
+z-index: 1;
+top: 1.5rem;
+right: 1rem;
+}
+/*menuコンテンツ*/
+.cp_fullscreenmenu .menu {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background-color: #000000;
+}
+.cp_fullscreenmenu .menu label {
+position: absolute;
+top: 20px;
+right: 20px;
+width: 30px;
+height: 30px;
+cursor: pointer;
+background-size: 100%;
+}
+.cp_fullscreenmenu .menu .menucont {
+font-size: 5vw;
+position: relative;
+top: 50%;
+margin-top: -170px;
+padding-bottom: 20px;
+text-align: center;
+}
+.cp_fullscreenmenu .menu ul {
+margin: 0 auto;
+padding: 0;
+list-style: none;
+}
+.cp_fullscreenmenu .menu ul li,
+.cp_fullscreenmenu .menu ul li a {
+transition: all 0.3s ease;
+}
+.cp_fullscreenmenu .menu ul li a {
+display: block;
+padding: 3rem 0;
+color: #ffffff;
+}
+.cp_fullscreenmenu .menu ul li a:hover {
+color: #000000;
+}
+.cp_fullscreenmenu .menu ul li:hover {
+background: #ffffff;
+}
+/*クリックしたらメニューが開閉の動作*/
+.cp_fullscreenmenu .menuEffects {
+visibility: hidden;
+transition: opacity 0.5s, visibility 0.5s;
+opacity: 0;
+}
+.cp_fullscreenmenu .menuEffects ul {
+transition: all 0.5s;
+transform: translateY(0%);
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .menuEffects {
+visibility: visible;
+transition: opacity 0.5s;
+opacity: 0.9;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .menuEffects ul {
+opacity: 1;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open {
+background-color: transparent;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:before {
+position: absolute;
+z-index: 1;
+top: 0;
+right: 0;
+content: '';
+transform: rotate(45deg);
+background-color: #ffffff;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:after {
+position: relative;
+z-index: 1;
+top: 0;
+right: 0;
+content: '';
+transform: rotate(-45deg);
+background-color: #ffffff;
+}
+.cp_fullscreenmenu #menuToggle:not(:checked) ~ .menuEffects ul {
+transform: translateY(-30%);
+}
+/*ハンバーガー*/
+.cp_fullscreenmenu .hamburger {
+position: relative;
+top: 0;
+right: 0;
+display: block;
+width: 50px;
+height: 50px;
+padding: 15px;
+cursor: pointer;
+z-index: 100;
+}
+.cp_fullscreenmenu .hamburger:hover .open:before {
+top: -9px;
+}
+.cp_fullscreenmenu .hamburger:hover .open:after {
+top: 5px;
+}
+.cp_fullscreenmenu .open,
+.cp_fullscreenmenu .open:before,
+.cp_fullscreenmenu .open:after {
+position: relative;
+display: block;
+width: 24px;
+height: 2px;
+border-radius: 2px;
+background-color: #ffffff;
+transition: all 0.3s ease;
+}
+.cp_fullscreenmenu .open {
+top: 8px;
+cursor: pointer;
+}
+.cp_fullscreenmenu .open:before {
+top: -8px;
+content: '';
+transform: rotate(0deg);
+}
+.cp_fullscreenmenu .open:after {
+top: 6px;
+content: '';
+}
 /** ハンバーガー用  **/
 
 .visual{
@@ -267,58 +297,82 @@ header .cp_fullscreenmenu{
     background-position: center center;
     width: 100%;
     height: 100.55vh;
+    margin-bottom: 14rem;
 }
-.visual .visualimg{
+.visual .visualimg {
     position   : absolute;
     top        : 0;
     left       : 0;
     bottom     : 0;
     right      : 0;
     opacity    : 0;
-    animation: bgAnime 12s infinite;
-}
-.visual .src1{
-    background-image: url(../img/anime01.png);
 
 }
-.visual .src2{
-    background-image: url(../img/anime02.png);
-    animation-delay: 4s;
+.visual .visualimg{
+	animation-name: album;
+	-webkit-animation-name: album;
+	animation-duration: 30s;
+	-webkit-animation-duration: 30s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	opacity: 0;
 }
-.visual .src3{
-    background-image: url(../img/anime03.png);
-    animation-delay: 8s;
+.visual .src1 {
+	display: block;
+	margin: 0 auto;
 }
-@keyframes bgAnime {
-    0% { opacity: 0; }
-    4% { opacity: 1; }
-   25% { opacity: 1; }
-   29% { opacity: 1; }
-  100% { opacity: 0; }
+.visual .src2 {
+	animation-delay:10s;
+	-webkit-animation-delay:10s;
+	position: absolute;
+	top: 0;
+}
+.visual .src3 {
+	animation-delay:20s;
+	-webkit-animation-delay:20s;
+	position: absolute;
+	top: 0;
+}
+@keyframes album {
+	0% {opacity: 0;}
+	12.5% {opacity: 1;}
+	37.5% {opacity: 1;}
+	50% {opacity: 0;}
+}
+@-webkit-keyframes visual {
+	0% {opacity: 0;}
+	12.5% {opacity: 1;}
+	37.5% {opacity: 1;}
+	50% {opacity: 0;}
 }
 
-#about{
-    margin: 14rem 7rem;
+.sp_visual{
+    display: none;
 }
-#about p {
+.content{
+    padding: 0 7rem;
+}
+#about .cnt_column p{
     font-size: 2rem;
     line-height: 2.3;
-    text-align: justify;
-    text-justify: inter-ideograph;
-    word-break: normal;
-    word-wrap: break-word;
-    font-feature-settings: "palt";
+    padding-top: 9rem;
+    display: inline-block;
+    text-align: left;
+    padding-right: 2.5rem;
+
+}
+#about ul{
     padding-top: 3rem;
+}
+#about li{
+    list-style-type: none;
+    font-size: 2rem;
+    line-height: 2.3;
     color: #b3b3b3;
 }
 #about .cnt_column h3{
     display: block;
     text-align: center;
-}
-#about .cnt_column p{
-    padding-top: 9rem;
-    display: inline-block;
-    text-align: left;
 }
 .column {
     display: -webkit-box;
@@ -341,6 +395,7 @@ header .cp_fullscreenmenu{
 .exhibition{
     display: block;
     margin-top: 14rem;
+    padding-right: 2.5rem;
 }
 .exhibition h3{
     display: block;
@@ -359,6 +414,7 @@ header .cp_fullscreenmenu{
 .award{
     display: block;
     margin-top: 14rem;
+    padding-left: 2.5rem;
 }
 .award h3{
     display: block;
@@ -383,7 +439,7 @@ header .cp_fullscreenmenu{
     font-size: 2.8rem;
     padding: 2rem 0;
 }
-#news li{
+#news li :nth-of-type(2){
     padding-right: 4rem;
 }
 #news p{
@@ -469,8 +525,8 @@ header .cp_fullscreenmenu{
 .modal-content {
     width: 60%;
 	margin: 0 ;
-    padding: 14rem 6rem ;
-    font-size: 4.8rem;
+    padding: 7rem 6rem;
+    font-size: 4.8vw;
     color: #000000;
 	background: #fff ;
 	position: fixed ;
@@ -519,7 +575,7 @@ header .cp_fullscreenmenu{
     font-feature-settings: "palt";
 }
 #modal-overlay {
-	z-index: 1;
+	z-index: 19;
 	display: none ;
 	position: fixed ;
 	top: 0 ;
@@ -532,6 +588,14 @@ header .cp_fullscreenmenu{
     margin: 3rem 0;
 }
 .button-link {
+    display: flex;
+    justify-content: center;
+    font-size: 6rem;
+	color: #000000 ;
+    text-decoration: none ;
+    padding-bottom: 5rem;
+}
+.button-link-pc{
     display: flex;
     justify-content: center;
     font-size: 6rem;
@@ -564,8 +628,15 @@ footer small{
 }
 
 /* ブラウザサイズが 1280px以下の時 */
-/* ブラウザサイズが 767px以下の時 スマホ*/
-@media all and (max-width: 1300px) {
+/* ブラウザサイズが 850px以下の時 スマホ
+ヘッダーのSNSが見えるギリギリサイズ(5/22現在)*/
+@media all and (max-width: 850px) {
+h2{
+    font-size: 5rem;
+}
+p{
+    margin:0;
+}
 header{
     height: 8rem;
 }
@@ -586,86 +657,47 @@ header .logo-img img {
     width: 24rem;
     margin-left: 1.8rem;
 }
-header .menu{
-    height: 2rem;
-    position: absolute;
-    right: 3rem;
-    top: 3rem;
-    width: 5rem;
-    z-index: 99;
+.line{
+    width: 45%;
 }
-header .menu__line{
-    background: #fff;
+.sp_visual{
     display: block;
-    height: 2px;
-    position: absolute;
-    transition:transform .3s;
-    width: 100%;
 }
-header .menu__line--center{
-    top: 10px;
-}
-header .menu__line--bottom{
-    bottom: -3px;
-}
-header .menu__line--top.active{
-    top: 8px;
-    transform: rotate(45deg);
-}
-header .menu__line--center.active{
-    transform:scaleX(0);
-}
-header .menu__line--bottom.active{
-    bottom: 10px;
-    transform: rotate(135deg);
-}
-header .gnav{
-    background: rgba(0,0,0,0.8);
+.visual{
     display: none;
-    height: 100%;
-    position: fixed;
-    width: 100%;
-    z-index: 98;
 }
-header .gnav__wrap{
-    align-items:center;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-}
-header .gnav__menu__item{
-    margin: 40px 0;
-}
-header .gnav__menu__item a{
-    color: #fff;
-    font-size: 2em;
-    font-weight: bold;
-    padding: 40px;
-    text-decoration: none;
-    transition: .5s;
-}
-header .gnav__menu__item a:hover{
-    color: #666;
-}
-header .hero{
-    background:url(images/hero.jpg) no-repeat;
-    background-position: 50% 50%;
+.sp_visual{
+    position: relative;
     background-size: cover;
-    height: 100vh;
-}
-.kv {
-    height: 600px;
-    background-position: left center;
-}
-.kv h2 {
-    font-size: 28px;
-}
-.kv p {
-    padding-top: 15px;
-    font-size: 18px;
+    background-position: center center;
     width: 100%;
+    height: 100vh;
+    margin-bottom: 14rem;
+}
+.sp_visual .visualimg{
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+    opacity    : 0;
+    animation: bgAnime 12s infinite;
+}
+.sp_visual .src2{
+    animation-delay: 4s;
+}
+.sp_visual .src3{
+    animation-delay: 8s;
+}
+@keyframes bgAnime {
+    0% { opacity: 0; }
+    4% { opacity: 1; }
+   25% { opacity: 1; }
+   29% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.content{
+    padding: 0;
 }
 .column {
     -webkit-box-orient: vertical;
@@ -683,16 +715,99 @@ header .hero{
     width: 100%;
     padding-bottom: 6rem;
 }
+#about .cnt_column h2{
+    padding-right: 3.5rem;
+}
+#about .cnt_column p{
+    font-size: 1.3rem;
+    padding: 4rem 2rem 0;
+}
+#about .exhibition{
+    margin: 9rem 2rem 0;
+    text-align: center;
+	display: block;
+}
+#about .exhibition ul{
+	padding-left: 0;
+    display: inline-block;
+}
+#about .exhibition ul li {
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    text-align: left;
+}
+#about .award{
+    padding: 0 2rem;
+    text-align: center;
+	display: block;
+}
+#about .award ul{
+	padding-left: 0;
+    display: inline-block;
+}
+#about .award ul li {
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    text-align: left;
+}
 .column_reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
 }
+#news li{
+    padding: 0 0 9rem;
+    width: 100%;
+}
+#news li :nth-of-type(2){
+    padding: 0 2rem;
+}
+#news ul h3 {
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+#news p{
+    font-size: 1.3rem;
+}
 #work .work_contents .pc{
+    display: none;
+}
+#work .button-link-pc{
     display: none;
 }
 #work .work_contents .sp{
     display: block;
+    width: 100%;
+}
+.modal-close-top{
+    position: relative;
+    z-index: 21;
+    top: -3rem;
+    right: 2rem;
+    margin: 0 0 0 auto;
+}
+.modal-content {
+    width: 100%;
+    padding: 3rem 0;
+}
+.modal-content p{
+    font-size: 1.3rem;
+    padding: 2rem;
+}
+#modal-content-01 h2{
+    font-size: 2rem;
+}
+#contact p{
+    font-size: 1.3rem;
+}
+footer{
+    height: 5.6rem;
+    line-height: 56px;
+    text-align: center;
+    margin: 9rem 0;
+}
+footer small{
+    font-size: 1.3rem;
 }
 }
