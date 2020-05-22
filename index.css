@@ -1,88 +1,698 @@
+@charset "UTF-8";
+html {
+    font-size: 62.5%;
+}
 body {
     margin: 0;
-    font-family: "DIN Alternate Bold"
-    font-family: "YuGothic medium"
+    font-family: 'DIN Alternate',YuGothic,'Yu Gothic', 'Arial','noto sans',sans-serif;
+    font-size: 1.6rem;
+    background: #000;
+    color: #b3b3b3;
 }
-
-img{
-    vertical-align: bottom;
+body.fixed {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
 }
-
-.main-page {
-    background-color:#fff;
-    color: #000000;
+h2 {
+    margin: 0;
+    font-size: 4.8rem;
+}
+h3 {
     text-align: center;
+    color: #d8d8d8;
+}
+img{
+    vertical-align: baseline;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+.line{
+    height: 2px;
+    background-color: #ffffff;
+    border: none;
+    text-align: left;
+    width: 32%;
+    margin: 3rem -6rem 7rem;
+}
+section {
+    margin: 0 7rem 14rem;
+}
+.all_container {
+    background-color:#000;
+    color: #ffffff;
     height: auto;
 }
-
-header h1{
-    margin: 0;
-}
-
-header > h1{
-    background-color: #000000;
-    height: 100px;
-    display: flex;
-    padding-left: 24px;
+header {
     align-items: center;
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    z-index: 18;
 }
 
-header > h1 > img{
-    width: 190px;
+header .inner {
+    display: flex;
 }
 
-header .container {
-    background-image: url(bik.jpeg);
+header .flexbox , .sns {
+    margin-right: auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+header .logo-img img{
+    width: 72%;
+    margin-left: 3.5rem;
+    padding-top: -5rem;
+}
+.nav-global{
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    margin-right: 2.5rem;
+}
+.nav-global ul{
+    margin-left: 3rem;
+}
+.nav-global li {
+    margin-right: 37px;
+    font-size: 1.6rem;
+}
+.nav-global li:last-child {
+    margin-right: 0;
+}
+.nav-global a {
+    color: #fff;
+    text-decoration: none;
+}
+.nav-global img{
+    width: 80%;
+}
+.nav-global .sns li{
+    margin-right: 13px;
+}
+header .nav_sp {
+    display: none;
+}
+
+/** ハンバーガー用  **/
+header .cp_fullscreenmenu{
+    display: none;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+    text-decoration: none;
+    color: inherit;
+    }
+    input {
+    display: none;
+    }
+    .cp_fullscreenmenu {
+    position: fixed;
+    z-index: 1;
+    top: 1.5rem;
+    right: 1rem;
+    }
+    /*menuコンテンツ*/
+    .cp_fullscreenmenu .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    }
+    .cp_fullscreenmenu .menu label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-size: 100%;
+    }
+    .cp_fullscreenmenu .menu .menucont {
+    font-size: 5vw;
+    position: relative;
+    top: 50%;
+    margin-top: -170px;
+    padding-bottom: 20px;
+    text-align: center;
+    }
+    .cp_fullscreenmenu .menu ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    }
+    .cp_fullscreenmenu .menu ul li,
+    .cp_fullscreenmenu .menu ul li a {
+    transition: all 0.3s ease;
+    }
+    .cp_fullscreenmenu .menu ul li a {
+    display: block;
+    padding: 3rem 0;
+    color: #ffffff;
+    }
+    .cp_fullscreenmenu .menu ul li a:hover {
+    color: #000000;
+    }
+    .cp_fullscreenmenu .menu ul li:hover {
+    background: #ffffff;
+    }
+    /*クリックしたらメニューが開閉の動作*/
+    .cp_fullscreenmenu .menuEffects {
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    }
+    .cp_fullscreenmenu .menuEffects ul {
+    transition: all 0.5s;
+    transform: translateY(0%);
+    }
+    .cp_fullscreenmenu #menuToggle:checked ~ .menuEffects {
+    visibility: visible;
+    transition: opacity 0.5s;
+    opacity: 0.7;
+    }
+    .cp_fullscreenmenu #menuToggle:checked ~ .menuEffects ul {
+    opacity: 1;
+    }
+    .cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open {
+    background-color: transparent;
+    }
+    .cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    content: '';
+    transform: rotate(45deg);
+    background-color: #ffffff;
+    }
+    .cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:after {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    content: '';
+    transform: rotate(-45deg);
+    background-color: #ffffff;
+    }
+    .cp_fullscreenmenu #menuToggle:not(:checked) ~ .menuEffects ul {
+    transform: translateY(-30%);
+    }
+    /*ハンバーガー*/
+    .cp_fullscreenmenu .hamburger {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 100;
+    }
+    .cp_fullscreenmenu .hamburger:hover .open:before {
+    top: -9px;
+    }
+    .cp_fullscreenmenu .hamburger:hover .open:after {
+    top: 5px;
+    }
+    .cp_fullscreenmenu .open,
+    .cp_fullscreenmenu .open:before,
+    .cp_fullscreenmenu .open:after {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    }
+    .cp_fullscreenmenu .open {
+    top: 8px;
+    cursor: pointer;
+    }
+    .cp_fullscreenmenu .open:before {
+    top: -8px;
+    content: '';
+    transform: rotate(0deg);
+    }
+    .cp_fullscreenmenu .open:after {
+    top: 4px;
+    content: '';
+    }
+/** ハンバーガー用  **/
+
+.visual{
+    position: relative;
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: 570px;
+    height: 100.55vh;
 }
-header .container > h1{
+.visual .visualimg{
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+    opacity    : 0;
+    animation: bgAnime 12s infinite;
+}
+.visual .src1{
+    background-image: url(../img/anime01.png);
+
+}
+.visual .src2{
+    background-image: url(../img/anime02.png);
+    animation-delay: 4s;
+}
+.visual .src3{
+    background-image: url(../img/anime03.png);
+    animation-delay: 8s;
+}
+@keyframes bgAnime {
+    0% { opacity: 0; }
+    4% { opacity: 1; }
+   25% { opacity: 1; }
+   29% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#about{
+    margin: 14rem 7rem;
+}
+#about p {
+    font-size: 2rem;
+    line-height: 2.3;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    word-break: normal;
+    word-wrap: break-word;
+    font-feature-settings: "palt";
+    padding-top: 3rem;
+    color: #b3b3b3;
+}
+#about .cnt_column h3{
+    display: block;
+    text-align: center;
+}
+#about .cnt_column p{
+    padding-top: 9rem;
+    display: inline-block;
+    text-align: left;
+}
+.column {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 570px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-around;
 }
 
-section {
-    margin: 40px auto 20px;
-}
-
-.news-wrapper h2 {
-    font-size: 26px;
-    letter-spacing: 5px;
-    border-bottom: 2px solid #7d7d7d;
-    padding-bottom: 13px;
-    margin-bottom: 50px;
-    width: 300px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-}
-.exbition-topr > img{
-    width: 100%;
-    max-width: 960px;
-}
-
-.news-top p {
-    font-size: 13px;
-    letter-spacing: 2px;
-    line-height: 3;
-}
-
-.link {
-    position: relative;
-    padding: 20px;
+.column .cnt_column {
+    width: 50%;
     text-align: center;
 }
 
-footer {
-    background-color: #000000;
+.column .cnt_column h2{
+    text-align: center;
+    padding-top: 6rem;
+}
+.exhibition{
+    display: block;
+    margin-top: 14rem;
+}
+.exhibition h3{
+    display: block;
+    text-align: center;
+    padding-bottom: 1.5rem;
+
+}
+.exhibition .exhibition_line{
+    border-top: 2px solid #ffffff;
+    text-align: center;
+    width: 40%;
+}
+.column .date{
     color: #fff;
-    height: 60px;
+}
+.award{
+    display: block;
+    margin-top: 14rem;
+}
+.award h3{
+    display: block;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+.award .award_line{
+    border-top: 2px solid #ffffff;
+    text-align: center;
+    width: 26%;
+}
+.margin-indent{
+    margin-left: 7rem;
+}
+
+#news ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+#news ul h3{
+    font-size: 2.8rem;
+    padding: 2rem 0;
+}
+#news li{
+    padding-right: 4rem;
+}
+#news p{
+    font-size: 2rem;
+    text-justify: inter-ideograph;
+    font-feature-settings: "palt";
+    color: #b3b3b3;
+}
+#news .cnt_column{
+    position: relative;
+    overflow: hidden;
+}
+#news .cnt_img .mask{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;	/* マスクを表示しない */
+	background-color: rgba(0,0,0,0.6);
+	-webkit-transition:	all 0.6s ease;
+	transition:	all 0.6s ease;
+}
+#news .cnt_img .caption {
+	font-size: 3rem;
+	text-align: center;
+	color:#fff;
+}
+#news .cnt_img:hover .mask {
+	opacity: 1;	/* マスクを表示する */
+	padding-top: 20rem;	/* ホバーで下にずらす */
+}
+#work .column{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+#work .contents{
+    margin-left: auto;
+    margin-right: auto;
+}
+#work .work_contents{
+    flex: 0 0 30%;
+    position: relative;
+    overflow: hidden;
+}
+#work .modal-syncer img{
+    width: 51.682vh;
+}
+#work .work_contents .pc{
+    display: block;
+}
+#work .work_contents .sp{
+    display: none;
+}
+.icon {
+    display: inline;
+}
+.icon ul li{
+    display: inline;
+    padding-right: 0.5rem;
+}
+#work .mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;	/* マスクを表示しない */
+	background-color: rgba(0,0,0,0.6);
+	-webkit-transition:	all 0.6s ease;
+	transition:	all 0.6s ease;
+}
+#work .work_contents .caption {
+	font-size: 3rem;
+	text-align: center;
+	color:#fff;
+}
+#work .work_contents:hover .mask {
+	opacity: 1;	/* マスクを表示する */
+	padding-top: 18rem;	/* ホバーで下にずらす */
+}
+.modal-content {
+    width: 60%;
+	margin: 0 ;
+    padding: 14rem 6rem ;
+    font-size: 4.8rem;
+    color: #000000;
+	background: #fff ;
+	position: fixed ;
+	display: none ;
+    z-index: 20;
+    overflow: scroll;
+    max-height: calc(100vh - 1.5rem);
+}
+.modal-content h2{
+    position: relative;
+    z-index: 22;
+    top: 8rem;
+}
+.modal-close-top{
+    position: relative;
+    z-index: 21;
+    top: -6rem;
+    margin: 0 0 0 auto;
+}
+.modal-content .title_en{
+    display: block;
+    padding-bottom: 2rem;
+    position: relative;
+    z-index: 21;
+    top: 8rem;
+}
+.modal-content .title_line{
+    border-top: 2px solid #000000;
+    text-align: left;
+    margin-left: -6rem;
+    width: 66.25%;
+    margin-top: 0;
+}
+.modal-content img{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.modal-content p{
+    font-size: 2rem;
+    line-height: 2;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    /* -ms-text-justify: inter-ideograph; */
+    word-break: normal;
+    word-wrap: break-word;
+    font-feature-settings: "palt";
+}
+#modal-overlay {
+	z-index: 1;
+	display: none ;
+	position: fixed ;
+	top: 0 ;
+	left: 0 ;
+	width: 100% ;
+	height: 120% ;
+	background-color: rgba( 0,0,0, 0.75 ) ;
+}
+.modal_youtube{
+    margin: 3rem 0;
+}
+.button-link {
+    display: flex;
+    justify-content: center;
+    font-size: 6rem;
+	color: #000000 ;
+    text-decoration: none ;
+    padding-bottom: 5rem;
+}
+#modal-content-01 h2{
+    font-size: 4rem;
+}
+#contact p{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.8;
+    text-justify: inter-ideograph;
+    word-break: normal;
+    word-wrap: break-word;
+    font-feature-settings: "palt";
+    color: #b3b3b3;
+}
+footer {
+    height: 5.6rem;
     line-height: 56px;
     text-align: right;
-    padding-right: 10px;
-    box-sizing: border-box;
+    margin: 0 14rem 14rem;
+}
+footer small{
+    font-size: 2rem;
+    color: #b3b3b3;
+}
+
+/* ブラウザサイズが 1280px以下の時 */
+/* ブラウザサイズが 767px以下の時 スマホ*/
+@media all and (max-width: 1300px) {
+header{
+    height: 8rem;
+}
+header h1{
+    width: 30rem;
+    padding-top: 2rem;
+}
+header .nav-global{
+    display: none;
+}
+header .nav_sp{
+    display: block;
+}
+header .cp_fullscreenmenu{
+    display: block;
+}
+header .logo-img img {
+    width: 24rem;
+    margin-left: 1.8rem;
+}
+header .menu{
+    height: 2rem;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    width: 5rem;
+    z-index: 99;
+}
+header .menu__line{
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition:transform .3s;
+    width: 100%;
+}
+header .menu__line--center{
+    top: 10px;
+}
+header .menu__line--bottom{
+    bottom: -3px;
+}
+header .menu__line--top.active{
+    top: 8px;
+    transform: rotate(45deg);
+}
+header .menu__line--center.active{
+    transform:scaleX(0);
+}
+header .menu__line--bottom.active{
+    bottom: 10px;
+    transform: rotate(135deg);
+}
+header .gnav{
+    background: rgba(0,0,0,0.8);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+}
+header .gnav__wrap{
+    align-items:center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+header .gnav__menu__item{
+    margin: 40px 0;
+}
+header .gnav__menu__item a{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 40px;
+    text-decoration: none;
+    transition: .5s;
+}
+header .gnav__menu__item a:hover{
+    color: #666;
+}
+header .hero{
+    background:url(images/hero.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100vh;
+}
+.kv {
+    height: 600px;
+    background-position: left center;
+}
+.kv h2 {
+    font-size: 28px;
+}
+.kv p {
+    padding-top: 15px;
+    font-size: 18px;
+    width: 100%;
+}
+.column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+}
+.column .cnt_img {
+    width: 100%;
+}
+.column .cnt_img img {
+    height: 100%;
+}
+.column .cnt_column {
+    width: 100%;
+    padding-bottom: 6rem;
+}
+.column_reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+}
+#work .work_contents .pc{
+    display: none;
+}
+#work .work_contents .sp{
+    display: block;
+}
 }
