@@ -717,13 +717,14 @@ header .logo-img img {
 }
 #about .cnt_column h2{
     padding-right: 3.5rem;
+    font-size: 4rem;
 }
 #about .cnt_column p{
     font-size: 1.3rem;
     padding: 4rem 2rem 0;
 }
 #about .exhibition{
-    margin: 9rem 2rem 0;
+    padding: 0 2rem;
     text-align: center;
 	display: block;
 }
