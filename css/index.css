@@ -391,6 +391,7 @@ content: '';
 .column .cnt_column h2{
     text-align: center;
     padding-top: 6rem;
+    padding-right: 3.5rem;
 }
 .exhibition{
     display: block;
