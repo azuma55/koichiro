@@ -382,7 +382,7 @@ header .nav_sp {
     text-align: left;
     color: #b3b3b3;
     padding-left: 3rem;
-    font-size: 0.9vw;
+    font-size: 1vw;
 }
 #about .column {
     display: -webkit-box;
@@ -423,7 +423,7 @@ header .nav_sp {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    font-size: 0.9vw;
+    font-size: 1vw;
     width: 50rem;
 }
 #about dl dt{
