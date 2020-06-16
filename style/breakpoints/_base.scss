@@ -1,0 +1,265 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: $cBlack;
+  color: $clightgray;
+  font-family: 'DIN Alternate',YuGothic,'Yu Gothic','Arial',sans-serif;
+  &.fixed {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+  }
+
+  /** modal-multi.jsとリンク **/
+  #modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 19;
+  }
+}
+
+.loader-wrap {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background:$cWhite;
+  z-index: 50;
+}
+
+.loader {
+position: relative;
+z-index: 20;
+
+.load_img{
+  width: 20rem;
+  transform: rotate(360deg);
+  transition: 1s;
+  animation: rotate-anime 1.7s infinite;
+  -ms-transform:rotate(360deg);
+-webkit-transform:rotate(360deg);
+-moz-transform:rotate(360deg);
+}
+
+  @keyframes rotate-anime {
+    0% {
+      transform:rotate(0deg);
+  }
+  100% {
+      transform:rotate(360deg);
+  }
+  }
+
+.load_imgtop{
+  position: absolute;
+  top: 57px;
+  right: 25px;
+  bottom: 0;
+  width: 16rem;
+  height: auto;
+}
+
+p{
+  color: $cBlack;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 6rem;
+}
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  vertical-align: baseline;
+
+}
+
+html, body, #main {
+  height: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  width: 50%;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $cWhite;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+}
+
+h3 {
+  margin: 0;
+  text-align: center;
+  font-weight: lighter;
+}
+
+h4, h5, p {
+  margin: 0;
+}
+
+h5{
+  font-weight: lighter;
+}
+
+p{
+  font-size: 1rem;
+}
+
+h4{
+  width: 50%;
+  margin-bottom: 3rem;
+  padding: 0 0 2rem 3.8rem;
+  font-size: 1.3rem;
+  border-bottom: 1px solid $cBlack;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  &[type="button"], &[type="text"], &[type="submit"], &[type="image"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+}
+
+textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+section {
+  margin-bottom: 7rem;
+  z-index: 5;
+}
+
+.content {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 12rem;
+}
+
+
+.all_container {
+  position: relative;
+  top: 5rem;
+  background-color: $cBlack;
+  color: $cWhite;
+  height: auto;
+  overflow-x: hidden;
+}
+
+.content {
+  padding: inherit;
+}
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.link-current {
+  border-bottom: 1px solid #fff;
+  transform-origin: right top;
+  transition: transform 0.1 0.5s;
+}
+
+header {
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+
+  .inner {
+    display: flex;
+    height: inherit;
+  }
+
+  .flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    width: 25rem;
+    height: 2rem;
+    margin-left: 3.7rem;
+    background-image: url(../img/logo01.png);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 100%;
+  }
+
+  .nav-global {
+    display: none;
+  }
+
+  .sns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+
+    li {
+      margin-right: 2rem;
+
+      &:nth-of-type(3) {
+        margin: 0;
+      }
+    }
+  }
+
+  #nav-drawer {
+    position: relative;
+  }
+}
+
+footer {
+  width: 16rem;
+  margin: 7rem auto 14rem;
+
+  small {
+    font-size: 1.5rem;
+    color: $clightgray;
+  }
+}

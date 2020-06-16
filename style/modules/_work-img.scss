@@ -1,0 +1,47 @@
+#work {
+    h2 {
+      background-image: url(../img/sp_h2_work.svg);
+      background-repeat: no-repeat;
+      background-position-x: 2rem;
+      background-size: 12rem;
+      padding-bottom: 1rem;
+    }
+    .work_contents{
+    .sp_img{
+      display: block;
+      width: 100%;
+    }
+  
+    @mixin work_img{
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 40vw;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    $num: "";
+    @for $i from 1 through 30 {
+      @if $i < 10 {
+        $num: "0#{$i}";
+      } @else {
+        $num: $i;
+      }
+      .image#{$num} {
+        @include work_img;
+        background-image: url(../img/sp_work#{$num}.jpg);
+      }
+    }
+
+    .caption{
+      display: none;
+    }
+    h6{
+      margin: 0 0 1.5rem;
+      text-align: right;
+      font-size: 1.1rem;
+      font-weight: lighter;
+    }
+  }
+}

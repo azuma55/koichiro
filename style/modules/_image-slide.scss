@@ -1,0 +1,119 @@
+#news {
+    h2 {
+      background-image: url(../img/sp_h2_news.svg);
+      background-repeat: no-repeat;
+      background-position-x: 2rem;
+      background-size: 12rem;
+      padding-bottom: 1rem;
+    }
+    
+    h3 {
+      padding: 1.5rem 0;
+    }
+
+    ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    li{
+      padding: 0 0 9rem;
+      width: 100%;
+    }
+
+    li :nth-of-type(2) {
+      padding: 0 2rem;
+    }
+
+    .cnt_column {
+      position: relative;
+      overflow: hidden;
+      padding: 1rem;
+    }
+
+    .texts {
+      text-align: center;
+    }
+  
+    ul h3 {
+      font-size: 2rem;
+      padding: 2rem 0 1rem 0;
+      font-weight: lighter;
+    }
+  
+    p {
+      font-size: 1.3rem;
+      padding-top: 5px;
+      text-justify: inter-ideograph;
+      font-feature-settings: "palt";
+      color: $clightgray;
+      text-align: center;
+    }
+
+  /** 以下slick関連 **/
+  .prev-arrow:hover, .next-arrow:hover {
+    opacity: 0.5;
+  }
+  
+  .prev-arrow {
+    position: absolute;
+    width: 7rem;
+    height: 26rem;
+    top: 0;
+    margin: 11rem 0;
+    background-image: url(../img/arrow_previous.png);
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    background-position: center;
+    z-index: 2;
+  }
+  
+  .next-arrow {
+    @extend .prev-arrow;
+    right: 0;
+    background-image: url(../img/arrow_next.png);
+  }
+  
+    button {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      background: none;
+      border: none;
+      border-radius: 0;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      text-indent: -9999px;
+  
+      &:before {
+        position: absolute;
+        content: '○';
+        font-size: 1.5rem;
+        text-indent: 0px;
+        top: 0;
+        left: 0;
+      }
+    }
+  
+    .slick-dotted {
+      margin: 0;
+    }
+  
+    .slick-active button:before {
+      content: '●';
+    }
+  
+    .dots {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .slide-dots li {
+      display: inline-block;
+      padding: 0 1.8rem;
+    }
+  }

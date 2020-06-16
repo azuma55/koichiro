@@ -2,31 +2,31 @@
 <html lang="ja">
     <!-- ※基本共通設定 -->
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-    <title>東弘一郎 Koichiro Azuma website</title>
-    <meta property="og:title" content="東弘一郎 Koichiro Azuma">
+    <title>Koichiro Azuma(東弘一郎)Official website</title>
+    <meta property="og:title" content="Koichiro Azuma(東弘一郎)Official website">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://koichiro-azuma.com/">
-    <meta property="og:image" content="https://koichiro-azuma.com/img/ogp.jpg">
-    <meta property="og:site_name" content="東弘一郎 Koichiro Azuma">
-    <meta property="og:description" content="東弘一郎_公式サイト Koichiro Azuma Official Website">
+    <meta property="og:url" content="https://azuma55.github.io/">
+    <meta property="og:image" content="https://azuma55.github.io/img/ogp.jpg">
+    <meta property="og:site_name" content="Koichiro Azuma(東弘一郎)Official website">
+    <meta property="og:description" content="AZUMA KOICHIRO(東弘一郎)のOfficial Websiteです。">
     
 <!-- Facebook用設定 -->
     <meta property="fb:app_id" content="946045459158201" />
     
 <!-- ※Twitter共通設定 -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="東弘一郎 Koichiro Azuma">
-<meta name="twitter:description" content="東弘一郎_公式サイト Koichiro Azuma Official Website">
-<meta name="twitter:image" content="https://koichiro-azuma.com/img/ogp.jpg">
-<meta itemprop="image" content="https://koichiro-azuma.com/img/ogp.jpg">
+<meta name="twitter:title" content="Koichiro Azuma(東弘一郎)Official website">
+<meta name="twitter:description" content=" AZUMA KOICHIRO(東弘一郎)のOfficial Websiteです。">
+<meta name="twitter:image" content="https://azuma55.github.io/img/ogp.jpg">
+<meta itemprop="image" content="https://azuma55.github.io/img/ogp.jpg">
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="東弘一郎 Koichiro Azuma">
+<meta name="description" content="AZUMA KOICHIRO(東弘一郎)のOfficial Websiteです。主な作品に廻転する不在や他転車など。">
 
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/index.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" rel="stylesheet" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="img/favicon.ico">
@@ -34,15 +34,21 @@
 <link rel="icon" type="image/png" href="img/android-chrome-256x256.png">
 </head>
 <body>
+    <div class="loader-wrap">
+        <div class="loader">
+            <img class="load_img" src="img/load.png" alt="loding">
+            <img class="load_imgtop" src="img/loadtop.png" alt="loding">
+            <p>Loading...</p></div>
+    </div>
+    
 <!-- JQueryで読み込み -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/modal-multi.js"></script>
 <script type="text/javascript" src="js/modal-fixed.js"></script>
-<script type="text/javascript" src="js/background_full.js"></script>
-<script type="text/javascript" src="js/header_link.js"></script>
-<script type="text/javascript" src="js/smoothscroll.js"></script>
-
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/smooth.js"></script>
+<script type="text/javascript" src="js/loding.js"></script>
+<script type="text/javascript" src="js/current.js"></script>
 
 <header>
     <div class="inner">
@@ -51,11 +57,11 @@
         </div>
     <div class="nav-global">
         <ul class="flexbox">
-            <li><a href="#" class="link">HOME</a></li>
-            <li><a href="#about"  class="link">ABOUT</a></li>
-            <li><a href="#news"  class="link">NEWS</a></li>
-            <li><a href="#work"  class="link">WORK</a></li>
-            <li><a href="#contact" class="link">CONTACT</a></li>
+            <li><a href="#home" id="top_link_js" class="link">HOME</a></li>
+            <li><a href="#about"  id="about_link_js" class="link">ABOUT</a></li>
+            <li><a href="#news"  id="news_link_js" class="link">NEWS</a></li>
+            <li><a href="#work"  id="work_link_js" class="link">WORK</a></li>
+            <li><a href="#contact" id="contact_link_js" class="link">CONTACT</a></li>
         </ul>
         <ul class="sns">
             <li><a href="https://twitter.com/swxpi" target="_blank"><img src="img/Twitter.png" onmouseover="this.src='img/Twitter_hover.png'" onmouseout="this.src='img/Twitter.png'"></a></li>
@@ -65,7 +71,8 @@
     </div>
     </div>
 
-    <div class="cp_fullscreenmenu">
+<!-- ハンバーガーメニュー -->
+<div class="nav_btn">
         <input type="checkbox" id="menuToggle" />
         <label for="menuToggle" class="hamburger">
             <div class="open"></div>
@@ -74,7 +81,7 @@
             <label for="menuToggle"></label>
         <div class="menucont">
             <ul>
-                <li><a href="#" onclick="$('input').prop('checked', false)">HOME</a></li>
+                <li><a href="#home" onclick="$('input').prop('checked', false)">HOME</a></li>
                 <li><a href="#about" onclick="$('input').prop('checked', false)">ABOUT</a></li>
                 <li><a href="#news" onclick="$('input').prop('checked', false)">NEWS</a></li>
                 <li><a href="#work" onclick="$('input').prop('checked', false)">WORK</a></li>
@@ -84,7 +91,6 @@
                 <li><a href="https://twitter.com/swxpi" target="_blank"><img src="img/Twitter.png" onmouseover="this.src='img/Twitter_hover.png'" onmouseout="this.src='img/Twitter.png'"></a></li>
                 <li><a href="https://www.facebook.com/koichiro.azuma.56?__tn__=%2CdC-R-R&eid=ARBj3lg7nfUC0-1ZYCm8lAYjI7mcxBOKepB34czgY3JBZfFJ6zxTu48G49O_7kFQW7PIo-8hI9SWPzRd&hc_ref=ARTvPyR2RAY59LZPPAOFo_gkYh9bTNNNDcMGoJYSQAzfTby1-BYUaVy2QOY9fr_pOu8&fref=nf" target="_blank"><img src="img/facebook.png" onmouseover="this.src='img/facebook_hover.png'" onmouseout="this.src='img/facebook.png'"></a></li>
                 <li><a href="https://www.instagram.com/koichiro.azuma/?hl=ja" target="_blank"><img src="img/instagram.png" onmouseover="this.src='img/instagram_hover.png'" onmouseout="this.src='img/instagram.png'"></a></li>
-    
             </ul>
         </div>
         </div>
@@ -92,33 +98,29 @@
 </header>
 
 <div class="all_container">
-<!-- KV -->
-<div class="visual">
-    <div class="visualimg src1">
-        <img src="img/anime01.jpg" alt="廻転する不在">
+    <!-- KV -->
+<section class="position-now" id="home">
+    <div class="hero">
+        <div class="heroimg src1">廻転する不在</div>
+        <div class="heroimg src2">自連車</div>
+        <div class="heroimg src3">他転車</div>
+        <div class="boxString txt1">
+            <h3>廻転する不在</h3>
+            <p>2020 立体</p>
+        </div>
+        <div class="boxString txt2">
+            <h3>自連車</h3>
+            <p>2020 立体</p>
+        </div>
+        <div class="boxString txt3">
+            <h3>他転車</h3>
+            <p>2018 立体</p>
+        </div>
     </div>
-    <div class="visualimg src2">
-        <img src="img/anime02.jpg" alt="いつかこの自転車に乗りたい">
-    </div>
-    <div class="visualimg src3">
-        <img src="img/anime03.jpg" alt="他転車">
-    </div>
-</div>
-
-<div class="sp_visual">
-    <div class="visualimg src1">
-        <img src="img/sp_anime01.jpg" alt="廻転する不在">
-    </div>
-    <div class="visualimg src2">
-        <img src="img/sp_anime02.jpg" alt="いつかこの自転車に乗りたい">
-    </div>
-    <div class="visualimg src3">
-        <img src="img/sp_anime03.jpg" alt="他転車">
-    </div>
-</div>
+</section>
 
 <!-- ABOUT -->
-<section id="about" class="js-smooth-scroll">
+<section class="position-now" id="about">
     <h2>ABOUT</h2>
     <div class="content">
     <div class="column column_reverse">
@@ -199,7 +201,7 @@
 </section>
 
 <!-- NEWS -->
-<section id="news" class="js-smooth-scroll">
+<section class="position-now" id="news">
     <h2>NEWS</h2>
     <div class="content">
         <ul class="column slider">
@@ -252,7 +254,7 @@
 </section>
 
 <!-- WORK -->
-<section id="work" class="js-smooth-scroll">
+<section class="position-now" id="work">
     <h2>WORK</h2>
     <div class="content">
     <div class="column">
@@ -267,15 +269,13 @@
                 <div class="contaier">
                     <img src="img/modal01_01.jpg" alt="自連車">
                     <img src="img/modal01_02.jpg" alt="自連車">
-                <p>LUMINE ART AWARDにて公開予定<br>
-                </p>
+                    <p>LUMINE ART AWARDにて公開予定<br></p>
                 <div class="movie-wrap">
-                <iframe class="modal_youtube" width="100%" height="540" src="https://www.youtube.com/embed/7Y1uJ3cG27I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="modal_youtube" width="100%" height="540" src="https://www.youtube.com/embed/7Y1uJ3cG27I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <a class="button-link"><div class="modal-close-bottom">close</div>
-                </a>
+                    <a class="button-link"><div class="modal-close-bottom">close</div></a>
                 </div>
-            </div>
+        </div>
 
 
         <!-- 廻転する不在 -->
@@ -301,10 +301,10 @@
                     ことで、時間も歴史も静止してしまった主人のない自転車に、新しい命を吹き込むことは出来ないだろうか。
                     </p>
                     <p>《廻転する不在》 立体・パフォーマンス 2020年 自転車,鉄</p>
-                    <div class="movie-wrap">
-                        <iframe class="modal_youtube" width="854" height="480" src="https://www.youtube.com/embed/1FNyVt3kLX0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                        <a class="button-link"><div class="modal-close-bottom">close</div></a>
+                <div class="movie-wrap">
+                    <iframe class="modal_youtube" width="854" height="480" src="https://www.youtube.com/embed/1FNyVt3kLX0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                    <a class="button-link"><div class="modal-close-bottom">close</div></a>
                 </div>
         </div>
 
@@ -326,9 +326,9 @@
                     捨てられ、動かなくなってしまったこれらの自転車は、２つで均衡を保ちながら浮き上がり、「自浮車」として動き出しました。これは、捨てられた自転車による最後の「わるあがき」でもあります。
                     </p>
                     <p>《自浮車》 立体 2018年 自転車,モーター,鉄</p>
-                    <div class="movie-wrap">
+                <div class="movie-wrap">
                     <iframe class="modal_youtube" width="100%" height="540" src="https://www.youtube.com/embed/Pm7RCLP6Dy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                </div>
                     <a class="button-link"><div class="modal-close-bottom">close</div></a>
                 </div>
         </div>
@@ -375,9 +375,9 @@
                     </p>
                     <p>《他転車》 立体 2018年 自転車,モーター,鉄</p>
                     <div class="movie-wrap">
-                    <iframe class="modal_youtube" width="100%" height="540" src="https://www.youtube.com/embed/Mk9kqxM3rNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="modal_youtube" width="100%" height="540" src="https://www.youtube.com/embed/Mk9kqxM3rNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <a class="button-link"><div class="modal-close-bottom">close</div></a>
+                        <a class="button-link"><div class="modal-close-bottom">close</div></a>
                 </div>
         </div>
 
@@ -464,180 +464,121 @@
                 </div>
         </div>
 
-
-
-        <!-- コンテンツ画像_PC版 -->
+        <!-- コンテンツ画像 -->
+        <div class="work_flex">
         <div class="work_contents">
-            <a class="modal-syncer button-link-pc" data-target="modal-content-01">
-            <img class="pc" src="img/work01.jpg" alt="自連車">
-            <div class="mask">
-                <div class="caption">
-                <h5>自連車<br>2020</h5>
-                <p>立体</p>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="work_contents">
-            <a class="modal-syncer button-link-pc" data-target="modal-content-02">
-            <img class="pc" src="img/work02.jpg" alt="廻転する不在">
-            <div class="mask">
-                <div class="caption">
-                    <h5>廻転する不在<br>2020</h5>
-                    <p>立体・パフォーマンス</p>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="work_contents">
-            <a class="modal-syncer button-link-pc" data-target="modal-content-03">
-            <img class="pc" src="img/work03.jpg" alt="自浮車">
-            <div class="mask">
-                <div class="caption">
-                    <h5>自浮車<br>2018</h5>
-                    <p>立体</p>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="work_contents">
-            <a class="modal-syncer button-link-pc" data-target="modal-content-04">
-            <img class="pc" src="img/work04.jpg" alt="■転車">
-            <div class="mask">
-                <div class="caption">
-                    <h5>■転車<br>2018</h5>
-                    <p>立体</p>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="work_contents">
-            <a class="modal-syncer button-link-pc" data-target="modal-content-05">
-            <img class="pc" src="img/work05.jpg" alt="他転車">
-            <div class="mask">
-                <div class="caption">
-                    <h5>他転車<br>2018</h5>
-                    <p>立体</p>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="work_contents">
-            <a class="modal-syncer button-link-pc" data-target="modal-content-06">
-            <img class="pc" src="img/work06.jpg" alt="自転転転転転車">
-            <div class="mask">
-                <div class="caption">
-                    <h5>自転転転転転車<br>2018</h5>
-                    <p>立体・鍛金</p>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="work_contents">
-            <a class="modal-syncer button-link-pc" data-target="modal-content-07">
-                <img class="pc" src="img/work07.jpg" alt="TIRE MACHINE">
-                <div class="mask">
-                    <div class="caption">
-                        <h5>TIRE MACHINE<br>2018</h5>
-                        <p>装置</p>
-                    </div>
-                </div>
-                </a>
-        </div>
-        <div class="work_contents">
-            <a class="modal-syncer button-link-pc" data-target="modal-content-08">
-                <img class="pc" src="img/work08.jpg" alt="BICYCLE">
-                <div class="mask">
-                    <div class="caption">
-                        <h5>BICYCLE<br>2017</h5>
-                        <p>インスタレーション</p>
-                    </div>
-                </div>
-                </a>
-        </div>
-        <div class="work_contents">
-            <a class="modal-syncer button-link-pc" data-target="modal-content-09">
-                <img class="pc" src="img/work09.jpg" alt="INAZUMA">
-                <div class="mask">
-                    <div class="caption">
-                        <h5>INAZUMA<br>2016</h5>
-                        <p>パフォーマンス</p>
-                    </div>
-                </div>
-                </a>
-        </div>
-
-        <!-- コンテンツ画像_SP版 -->
-        <div class="work_contents_sp">
             <a class="modal-syncer button-link" data-target="modal-content-01">
-                <figure><figcaption><img class="sp" src="img/sp_work01.jpg" alt="自連車"></figcaption>
-                <p>自連車 2020年 立体</p></figure></a>
+                <div class="sp_img image01">自連車</div>
+                <div class="mask">
+                    <div class="caption">
+                    <h5>自連車</h5>
+                    <p>2020</p><p>立体</p></div>
+                </div>
+            </a>
+            <h6>自連車 2020年 立体</h6>
         </div>
-        <div class="work_contents_sp">
+        <div class="work_contents">
             <a class="modal-syncer button-link" data-target="modal-content-02">
-            <figure><figcaption><img class="sp" src="img/sp_work02.jpg" alt="廻転する不在"></figcaption>
-            <p>廻転する不在 2020年 立体・パフォーマンス</p></figure></a>
+            <div class="sp_img image02">廻転する不在</div>
+            <div class="mask">
+                <div class="caption">
+                <h5>廻転する不在</h5>
+                <p>2020</p><p>立体・パフォーマンス</p></div>
+            </div>
+            <h6>廻転する不在 2020年 立体・パフォーマンス</h6></a>
         </div>
-        <div class="work_contents_sp">
+        <div class="work_contents">
             <a class="modal-syncer button-link" data-target="modal-content-03">
-            <figure><figcaption><img class="sp" src="img/sp_work03.jpg" alt="自浮車"></figcaption>
-            <p>自浮車 2018年 立体</p></figure></a>
+            <div class="sp_img image03">自浮車</div>
+            <div class="mask">
+                <div class="caption">
+                <h5>自浮車</h5>
+                <p>2018</p><p>立体</p></div>
+            </div>
+            <h6>自浮車 2018年 立体</h6></a>
         </div>
-        <div class="work_contents_sp">
+        <div class="work_contents">
             <a class="modal-syncer button-link" data-target="modal-content-04">
-            <figure><figcaption><img class="sp" src="img/sp_work04.jpg" alt="■転車"></figcaption>
-            <p>■転車 2018年 立体</p></figure></a>
+            <div class="sp_img image04">■転車</div>
+            <div class="mask">
+                <div class="caption">
+                <h5>■転車</h5>
+                <p>2018</p><p>立体</p></div>
+            </div>
+            <h6>■転車 2018年 立体</h6></a>
         </div>
-        <div class="work_contents_sp">
+        <div class="work_contents">
             <a class="modal-syncer button-link" data-target="modal-content-05">
-            <figure><figcaption><img class="sp" src="img/sp_work05.jpg" alt="他転車"></figcaption>
-            <p>他転車 2018年 立体</p></figure></a>
+            <div class="sp_img image05">他転車</div>
+            <div class="mask">
+                <div class="caption">
+                <h5>他転車</h5>
+                <p>2018</p><p>立体</p></div>
+            </div>
+            <h6>他転車 2018年 立体</h6></a>
         </div>
-        <div class="work_contents_sp">
+        <div class="work_contents">
             <a class="modal-syncer button-link" data-target="modal-content-06">
-            <figure><figcaption><img class="sp" src="img/sp_work06.jpg" alt="自転転転転転車"></figcaption>
-            <p>自転転転転転車 2018年 立体</p></figure></a>
+            <div class="sp_img image06">自転転転転転車</div>
+            <div class="mask">
+                <div class="caption">
+                <h5>自転転転転転車</h5>
+                <p>2018</p><p>立体</p></div>
+            </div>
+            <h6>自転転転転転車 2018年 立体</h6></a>
         </div>
-        <div class="work_contents_sp">
+        <div class="work_contents">
             <a class="modal-syncer button-link" data-target="modal-content-07">
-            <figure><figcaption><img class="sp" src="img/sp_work07.jpg" alt="TIRE MACHINE"></figcaption>
-            <p>TIRE MACHINE 2018年 立体</p></figure></a>
+            <div class="sp_img image07">TIRE MACHINE</div>
+            <div class="mask">
+                <div class="caption">
+                <h5>TIRE MACHINE</h5>
+                <p>2018</p><p>立体</p></div>
+            </div>
+            <h6>TIRE MACHINE 2018年 立体</h6></a>
         </div>
-        <div class="work_contents_sp">
+        <div class="work_contents">
             <a class="modal-syncer button-link" data-target="modal-content-08">
-            <figure><figcaption><img class="sp" src="img/sp_work08.jpg" alt="BICYCLE"></figcaption>
-            <p>BICYCLE 2018年 立体</p></figure></a>
+            <div class="sp_img image08">BICYCLE</div>
+            <div class="mask">
+                <div class="caption">
+                <h5>BICYCLE</h5>
+                <p>2018</p><p>立体</p></div>
+            </div>
+            <h6>BICYCLE 2018年 立体</h6></a>
         </div>
-        <div class="work_contents_sp">
+        <div class="work_contents">
             <a class="modal-syncer button-link" data-target="modal-content-09">
-            <figure><figcaption><img class="sp" src="img/sp_work09.jpg" alt="INAZUMA"></figcaption>
-            <p>INAZUMA 2016年 パフォーマンス</p></figure></a>
+            <div class="sp_img image09">INAZUMA</div>
+            <div class="mask">
+                <div class="caption">
+                <h5>INAZUMA</h5>
+                <p>2016</p><p>パフォーマンス</p></div>
+            </div>
+            <h6>INAZUMA 2016年 パフォーマンス</h6></a>
         </div>
 
     </div>
     </div>
+</div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="js-smooth-scroll">
+    <section class="position-now" id="contact">
         <h2>CONTACT</h2>
         <div class="content">
             <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeM2X9o3VUG4d-aWcrpHFH8hiGaW86VlBD-jG2PVgFHL0IETg/formResponse" target="_self" method="POST" id="mG61Hd">
                 <dl>
                     <dt>Name</dt>
                     <dd><input name="entry.1826431607" type="text" required="required" id="textfield" class="g_form" placeholder="Name"></dd>
-
                     <dt><label for="textfield2">Email</label></dt>
                     <dd><input name="entry.477463285" type="text" required="required" class="g_form" id="textfield1" placeholder="Email"></dd>
                     <dt>TEL</dt>
                     <dd><input name="entry.526476052" type="text" required="required" class="g_form" id="textfield2" placeholder="TEL"></dd>
-
                     <dt><label for="textfield2">Title</label></dt>
                     <dd><input name="entry.2112935214" type="text" required="required" class="g_form" id="textfield3" placeholder="Title"></dd>
-
                     <dt>Message</dt>
                     <dd><textarea name="entry.1058165167" required class="g_form_text" id="entry.1276685215" placeholder="Message"></textarea></dd>
-
                     <dt>送信</dt>
                     <dd><input type="submit" class="btbt" value="SEND"></dd>
                 </dl>
@@ -650,26 +591,10 @@
         <small>&copy; 2020 Koichiro Azuma.</small>
     </footer>
     <!-- スクリプト -->
-    <script>
-        import smoothscroll from "smoothscroll-polyfill";
-
-        document.addEventListener("click", e => {
-
-          const target = e.target;
-          // clickした要素がclass属性、js-smooth-scrollを含まない場合は処理を中断
-          if (!target.classList.contains("js-smooth-scroll")) return;
-          e.preventDefault();
-          const targetId = target.hash;
-          document.querySelector(targetId).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-        });
-          </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/slick.js"></script>
-    </div>
+</div>
 </body>
 </html>

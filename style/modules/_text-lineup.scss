@@ -1,0 +1,114 @@
+#about {
+    h2 {
+      background-image: url(../img/sp_h2_about.svg);
+      background-repeat: no-repeat;
+      background-position-x: 2rem;
+      background-size: 12rem;
+      padding-bottom: 1rem;
+    }
+    .column {
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+    .column_reverse {
+      flex-direction: column-reverse;
+    }
+    .cnt_column {
+      width: 100%;
+      padding-bottom: 6rem;
+      text-align: center;
+    }
+    h3 {
+      display: block;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: lighter;
+      letter-spacing: 0.1em;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 1;
+      letter-spacing: 0.1em;
+      padding-bottom: 3rem;
+      
+      &:nth-of-type(2) {
+        display: inline-block;
+        font-size: 1.1rem;
+        line-height: 1.9;
+        letter-spacing: normal;
+        text-align: left;
+        color: $clightgray;
+        padding-bottom: 0;
+      }
+    }
+    .exhibition , .award {
+      display: block;
+      text-align: center;
+      width: 100%;
+      padding: 0 2rem 6rem;
+    }
+    .colum h3 {
+      border-bottom: 1px solid $cWhite;
+      width: 32%;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+    }
+    @mixin h3style{
+      display: block;
+      padding-bottom: 5px;
+      background-size: 10rem;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      border-bottom: 1px solid $cWhite;
+      width: 10rem;
+      height: 2.8rem;
+      margin: 0 auto;
+    }
+    .exhibition h3 {
+      @include h3style;
+      background-image: url(../img/sp_h3_exhibi.svg);
+    }
+    .award{
+      padding: 0 2rem 6rem;
+    }
+    .award h3 {
+      @include h3style;
+      background-image: url(../img/sp_h3_award.svg);
+    }
+    dl {
+      display: flex;
+      width: 34em;
+      margin: 0 auto;
+      padding-top: 2rem;
+      font-size: 1.1rem;
+      flex-wrap: wrap;
+      align-items: baseline;
+  
+      dt {
+        width: 14%;
+        color: $ctitle;
+      }
+  
+      dd {
+        width: 86%;
+        margin-inline-start: 0;
+        padding-bottom: 8px;
+        text-align: left;
+      }
+    }
+  
+    dd {
+      color: $clightgray;
+  
+      &:after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    }
+  }
