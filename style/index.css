@@ -683,8 +683,8 @@ body {
     transform: rotate(360deg); } }
   .loader .load_imgtop {
     position: absolute;
-    top: 57px;
-    right: 25px;
+    top: 51px;
+    right: 22px;
     bottom: 0;
     width: 16rem;
     height: auto; }
@@ -932,7 +932,7 @@ footer {
     background-size: 15rem;
     padding-bottom: 3.5rem; }
   #about p:nth-of-type(2), #about dl {
-    font-size: 1.1vw; }
+    font-size: 1.3rem; }
   #about .content {
     padding: 0 12rem 0 8rem; }
   #about .column {
