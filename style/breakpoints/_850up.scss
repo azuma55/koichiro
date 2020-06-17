@@ -283,20 +283,15 @@ figcaption {
   transition: .3s;
   opacity: 0;
 
-  .caption{
-    height: 8vw;
-  }
-
   h6{
     display: block;
-    font-size: 2vw;
+    font-size: calc(1.5rem + 0.8vw);
     font-weight: lighter;
-    margin: 6.7vw auto 1vw;
+    margin: 8.3vw auto 1rem;
   }
 
   p{
-    font-size: 1.1vw;
-    margin-bottom: 6.7vw;
+    font-size: calc(1rem + 0.3vw);
   }
 }
 figure:hover figcaption {

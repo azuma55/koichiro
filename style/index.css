@@ -1039,16 +1039,13 @@ footer {
       -webkit-transition: .3s;
       transition: .3s;
       opacity: 0; }
-      #work figcaption .caption {
-        height: 8vw; }
       #work figcaption h6 {
         display: block;
-        font-size: 2vw;
+        font-size: calc(1.5rem + 0.8vw);
         font-weight: lighter;
-        margin: 6.7vw auto 1vw; }
+        margin: 8.3vw auto 1rem; }
       #work figcaption p {
-        font-size: 1.1vw;
-        margin-bottom: 6.7vw; }
+        font-size: calc(1rem + 0.3vw); }
     #work figure:hover figcaption {
       opacity: 1; }
     #work .modal-syncer {
