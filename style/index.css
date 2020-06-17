@@ -328,256 +328,17 @@
   background-position-x: 2rem;
   background-size: 12rem;
   padding-bottom: 1rem; }
-#work .work_contents .sp_img {
+#work .work_contents {
+  display: none; }
+#work .work_contents_sp {
   display: block;
   width: 100%; }
-#work .work_contents .image01 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work01.jpg); }
-#work .work_contents .image02 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work02.jpg); }
-#work .work_contents .image03 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work03.jpg); }
-#work .work_contents .image04 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work04.jpg); }
-#work .work_contents .image05 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work05.jpg); }
-#work .work_contents .image06 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work06.jpg); }
-#work .work_contents .image07 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work07.jpg); }
-#work .work_contents .image08 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work08.jpg); }
-#work .work_contents .image09 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work09.jpg); }
-#work .work_contents .image10 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work10.jpg); }
-#work .work_contents .image11 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work11.jpg); }
-#work .work_contents .image12 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work12.jpg); }
-#work .work_contents .image13 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work13.jpg); }
-#work .work_contents .image14 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work14.jpg); }
-#work .work_contents .image15 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work15.jpg); }
-#work .work_contents .image16 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work16.jpg); }
-#work .work_contents .image17 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work17.jpg); }
-#work .work_contents .image18 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work18.jpg); }
-#work .work_contents .image19 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work19.jpg); }
-#work .work_contents .image20 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work20.jpg); }
-#work .work_contents .image21 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work21.jpg); }
-#work .work_contents .image22 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work22.jpg); }
-#work .work_contents .image23 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work23.jpg); }
-#work .work_contents .image24 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work24.jpg); }
-#work .work_contents .image25 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work25.jpg); }
-#work .work_contents .image26 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work26.jpg); }
-#work .work_contents .image27 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work27.jpg); }
-#work .work_contents .image28 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work28.jpg); }
-#work .work_contents .image29 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work29.jpg); }
-#work .work_contents .image30 {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 40vw;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../img/sp_work30.jpg); }
-#work .work_contents .caption {
-  display: none; }
-#work .work_contents h6 {
-  margin: 0 0 1.5rem;
-  text-align: right;
-  font-size: 1.1rem;
-  font-weight: lighter; }
+  #work .work_contents_sp figure {
+    margin: 0; }
+  #work .work_contents_sp p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: right; }
 
 #work .modal-content {
   color: #000;
@@ -1060,8 +821,8 @@ header {
     position: relative; }
 
 footer {
-  width: 16rem;
-  margin: 7rem auto 14rem; }
+  margin: 7rem 0 14rem;
+  text-align: center; }
   footer small {
     font-size: 1.5rem;
     color: #b3b3b3; }
@@ -1135,7 +896,7 @@ footer {
     height: 56.25vw;
     margin-bottom: 7.7vw; }
     .hero:after {
-      height: 100vh;
+      height: 56.25vw;
       box-shadow: 0px 0px 128px 0px black inset; }
     .hero .src1 {
       width: 100%;
@@ -1235,163 +996,6 @@ footer {
       background-position-x: 3.5rem;
       background-size: 15rem;
       padding-bottom: 3.5rem; }
-    #work .work_flex {
-      display: flex;
-      flex: 0 0 30%;
-      justify-content: space-between;
-      flex-wrap: wrap; }
-    #work .work_contents {
-      position: relative;
-      flex: 0 0 30%;
-      margin-bottom: 4rem;
-      overflow: hidden;
-      cursor: pointer; }
-      #work .work_contents .modal-syncer {
-        position: relative;
-        width: 35rem; }
-      #work .work_contents .image01 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work01.jpg); }
-      #work .work_contents .image02 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work02.jpg); }
-      #work .work_contents .image03 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work03.jpg); }
-      #work .work_contents .image04 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work04.jpg); }
-      #work .work_contents .image05 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work05.jpg); }
-      #work .work_contents .image06 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work06.jpg); }
-      #work .work_contents .image07 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work07.jpg); }
-      #work .work_contents .image08 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work08.jpg); }
-      #work .work_contents .image09 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work09.jpg); }
-      #work .work_contents .image10 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work10.jpg); }
-      #work .work_contents .image11 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work11.jpg); }
-      #work .work_contents .image12 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work12.jpg); }
-      #work .work_contents .image13 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work13.jpg); }
-      #work .work_contents .image14 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work14.jpg); }
-      #work .work_contents .image15 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work15.jpg); }
-      #work .work_contents .image16 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work16.jpg); }
-      #work .work_contents .image17 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work17.jpg); }
-      #work .work_contents .image18 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work18.jpg); }
-      #work .work_contents .image19 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work19.jpg); }
-      #work .work_contents .image20 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work20.jpg); }
-      #work .work_contents .image21 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work21.jpg); }
-      #work .work_contents .image22 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work22.jpg); }
-      #work .work_contents .image23 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work23.jpg); }
-      #work .work_contents .image24 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work24.jpg); }
-      #work .work_contents .image25 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work25.jpg); }
-      #work .work_contents .image26 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work26.jpg); }
-      #work .work_contents .image27 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work27.jpg); }
-      #work .work_contents .image28 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work28.jpg); }
-      #work .work_contents .image29 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work29.jpg); }
-      #work .work_contents .image30 {
-        width: 31.2rem;
-        height: 31.2rem;
-        background-image: url(../img/work30.jpg); }
-      #work .work_contents .caption {
-        display: block;
-        text-align: center;
-        padding-top: 12rem;
-        color: #fff; }
-        #work .work_contents .caption h5 {
-          font-size: 2.5rem; }
-        #work .work_contents .caption p {
-          font-size: 1.8rem; }
-    #work .mask {
-      width: 31.2rem;
-      height: 31.2rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      -webkit-transition: all 0.4s ease;
-      transition: all 0.4s ease; }
-    #work .mask:hover {
-      opacity: 1; }
-    #work h6 {
-      display: none; }
     #work .modal-content {
       width: 60%;
       padding: initial; }
@@ -1401,6 +1005,55 @@ footer {
         font-size: 1.3rem; }
       #work .modal-content .contaier {
         padding: 2rem 3rem 4rem; }
+    #work .work_contents_sp {
+      display: none; }
+    #work .content_flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
+    #work .work_contents {
+      display: block;
+      box-sizing: border-box;
+      margin: 0 30px 30px 0;
+      width: calc(33.333333% - 100px / 3); }
+    #work .work_content:nth-child(3n) {
+      margin-right: 0; }
+    #work .work_content:nth-child(6n) {
+      margin-right: 0; }
+    #work .work_content:nth-child(9n) {
+      margin-right: 0; }
+    #work figure {
+      position: relative;
+      overflow: hidden;
+      margin: 0; }
+    #work figcaption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      -webkit-transition: .3s;
+      transition: .3s;
+      opacity: 0; }
+      #work figcaption .caption {
+        height: 8vw; }
+      #work figcaption h6 {
+        display: block;
+        font-size: 2vw;
+        font-weight: lighter;
+        margin: 6.7vw auto 1vw; }
+      #work figcaption p {
+        font-size: 1.1vw;
+        margin-bottom: 6.7vw; }
+    #work figure:hover figcaption {
+      opacity: 1; }
+    #work .modal-syncer {
+      position: relative;
+      width: 35rem; }
 
   /** CONTACT **/
   #contact h2 {
