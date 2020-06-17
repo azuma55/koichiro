@@ -45,7 +45,7 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background:$cWhite;
+  background:$cBlack;
   z-index: 50;
 }
 
@@ -74,15 +74,15 @@ z-index: 20;
 
 .load_imgtop{
   position: absolute;
-  top: 57px;
-  right: 25px;
+  top: 51px;
+  right: 22px;
   bottom: 0;
   width: 16rem;
   height: auto;
 }
 
 p{
-  color: $cBlack;
+  color: $cWhite;
   font-size: 2rem;
   text-align: center;
   margin-top: 6rem;
