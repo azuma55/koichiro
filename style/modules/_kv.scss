@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 50vh;
+  height: 100vw;
   margin-bottom: 7rem;
   overflow: hidden;
 
@@ -29,7 +29,6 @@
 
   @mixin sphero{
     width: 100%;
-    height: 50vh;
     background-size: 100%;
     background-repeat: no-repeat;
     text-indent: -9999px;
