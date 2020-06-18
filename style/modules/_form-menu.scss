@@ -70,9 +70,15 @@
       -webkit-appearance: none;
       border-radius: 0;
     }
+    input::placeholder{
+      color: #5f5f5f;
+    }
     textarea {
       -webkit-appearance: none;
       border-radius: 0;
+    }
+    textarea::placeholder{
+      color: #5f5f5f;
     }
 
     .btbt {

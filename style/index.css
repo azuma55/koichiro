@@ -474,9 +474,13 @@
 #contact .input {
   -webkit-appearance: none;
   border-radius: 0; }
+#contact input::placeholder {
+  color: #5f5f5f; }
 #contact textarea {
   -webkit-appearance: none;
   border-radius: 0; }
+#contact textarea::placeholder {
+  color: #5f5f5f; }
 #contact .btbt {
   position: relative;
   width: 100%;
