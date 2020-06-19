@@ -688,10 +688,10 @@ body {
     transform: rotate(360deg); } }
   .loader .load_imgtop {
     position: absolute;
-    top: 51px;
-    right: 22px;
+    top: 42px;
+    right: 11px;
     bottom: 0;
-    width: 16rem;
+    width: 18rem;
     height: auto; }
   .loader p {
     color: #fff;
