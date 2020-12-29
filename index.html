@@ -50,6 +50,7 @@
 <script type="text/javascript" src="js/smooth.js"></script>
 <script type="text/javascript" src="js/loding.js"></script>
 <script type="text/javascript" src="js/current.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 
 <header>
     <div class="inner">
@@ -764,7 +765,7 @@
     <section class="position-now" id="contact">
         <h2>CONTACT</h2>
         <div class="content">
-            <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeM2X9o3VUG4d-aWcrpHFH8hiGaW86VlBD-jG2PVgFHL0IETg/formResponse" target="_self" method="POST" id="mG61Hd">
+            <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeM2X9o3VUG4d-aWcrpHFH8hiGaW86VlBD-jG2PVgFHL0IETg/formResponse" target="_self" method="POST" id="mG61Hd">               
                 <dl>
                     <dt>Name</dt>
                     <dd><input name="entry.1826431607" type="text" required="required" id="textfield" class="g_form" placeholder="Name"></dd>
@@ -776,8 +777,10 @@
                     <dd><input name="entry.2112935214" type="text" required="required" class="g_form" id="textfield3" placeholder="Title"></dd>
                     <dt>Message</dt>
                     <dd><textarea name="entry.1058165167" required class="g_form_text" id="entry.1276685215" placeholder="Message"></textarea></dd>
+                    <dt>ロボット</dt>
+                    <dd><div class="g-recaptcha" data-callback="validateRecaptcha" data-sitekey="6LdXMhkaAAAAALOWPHPyjlYBk8SV8Ij-e-Z2WNsm"></div></dd>
                     <dt>送信</dt>
-                    <dd><input type="submit" class="btbt" value="SEND"></dd>
+                    <dd><input type="submit" name="ACMS_POST_Form_Submit" value="SEND" id="btnSubmit" class="recaptcha btbt" disabled /></dd>
                 </dl>
             </form>
         </div>

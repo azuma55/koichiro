@@ -446,6 +446,9 @@
 #contact dt:nth-of-type(6) {
   padding: initial;
   text-indent: -9999px; }
+#contact dt:nth-of-type(7) {
+    padding: initial;
+    text-indent: -9999px; }
 #contact dd:nth-of-type(5) {
   padding: initial; }
 #contact dd:nth-of-type(6) {
