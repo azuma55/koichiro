@@ -51,6 +51,15 @@
 <script type="text/javascript" src="js/loding.js"></script>
 <script type="text/javascript" src="js/current.js"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  function validateRecaptcha ( code ) {
+    if ( !!code ) {
+      var form = document.querySelector(".recaptcha");
+      form.removeAttribute('disabled');
+    }
+  }
+</script>
 
 <header>
     <div class="inner">
