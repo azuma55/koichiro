@@ -175,6 +175,8 @@
     text-align: left;
     color: #b3b3b3;
     padding-bottom: 0; }
+  #about p a {
+    border-bottom: 1px solid; }
 #about .exhibition, #about .award {
   display: block;
   text-align: center;
@@ -447,8 +449,8 @@
   padding: initial;
   text-indent: -9999px; }
 #contact dt:nth-of-type(7) {
-    padding: initial;
-    text-indent: -9999px; }
+  padding: initial;
+  text-indent: -9999px; }
 #contact dd:nth-of-type(5) {
   padding: initial; }
 #contact dd:nth-of-type(6) {
@@ -986,7 +988,7 @@ footer {
   #news .prev-arrow, #news .next-arrow, #news .next-arrow {
     position: relative;
     top: 0;
-    width: 13rem;
+    width: 18rem;
     background-size: 2rem;
     height: 10rem;
     margin: 9rem 0;
@@ -1080,7 +1082,7 @@ footer {
     padding-bottom: 2.3rem; }
   #contact .g_form {
     height: 4rem; }
-  #contact .recaptcha {
+  #contact .btbt {
     font-size: 2.8rem;
     height: 7rem; } }
 @media all and (max-width: 480px) and (max-width: 480px) {
