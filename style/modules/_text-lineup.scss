@@ -42,6 +42,10 @@
         color: $clightgray;
         padding-bottom: 0;
       }
+
+      a{
+        border-bottom: 1px solid;
+      }
     }
     .exhibition , .award {
       display: block;
