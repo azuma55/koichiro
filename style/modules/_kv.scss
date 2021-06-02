@@ -43,9 +43,9 @@
     -webkit-animation-delay: 8s;
             animation-delay: 8s;
   }
-  .src3 {
+  .src4 {
     @include sphero;
-    background-image: url(../img/sp_anime03.jpg);
+    background-image: url(../img/sp_anime04.jpg);
     -webkit-animation-delay: 16s;
             animation-delay: 16s;
   }
@@ -97,7 +97,7 @@
     animation-delay: 8s;
   }
 
-  .txt3{
+  .txt4{
     @include txtanime;
     -webkit-animation-delay: 16s;
     animation-delay: 16s;
