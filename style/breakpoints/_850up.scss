@@ -295,6 +295,13 @@ figcaption {
     margin: 8.3vw auto 1rem;
   }
 
+  h6:nth-of-type(6){
+    display: block;
+    font-size: calc(1.2rem + 0.8vw);
+    font-weight: lighter;
+    margin: 8.3vw auto 1rem;
+  }
+
   p{
     font-size: calc(1rem + 0.3vw);
   }
