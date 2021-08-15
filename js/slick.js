@@ -1,6 +1,6 @@
         $('.slider').slick({
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 9500,
             arrow: true,
             prevArrow: '<div class="prev-arrow"></div>',
             nextArrow: '<div class="next-arrow"></div>',
