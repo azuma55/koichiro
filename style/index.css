@@ -592,6 +592,10 @@
   padding-bottom: 2rem;
 }
 
+#work .modal-content .ph p {
+  text-align: right;
+}
+
 #work .modal-content .movie-wrap {
   position: relative;
   padding-bottom: 56.25%;
@@ -1551,6 +1555,12 @@ Stylesheet: 1280px以上のモニタで適用
   #work figcaption h6 {
     display: block;
     font-size: calc(1.5rem + 0.8vw);
+    font-weight: lighter;
+    margin: 8.3vw auto 1rem;
+  }
+  #work figcaption h6:nth-of-type(6) {
+    display: block;
+    font-size: calc(1.2rem + 0.8vw);
     font-weight: lighter;
     margin: 8.3vw auto 1rem;
   }
