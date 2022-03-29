@@ -91,7 +91,7 @@
   }
   .src1 {
     @include pc_heroimg;
-    background-image: url(../img/anime01.jpg);
+    background-image: url(../img/anime03.jpg);
   }
   .src2 {
     @include pc_heroimg;
@@ -101,7 +101,7 @@
   }
   .src4 {
     @include pc_heroimg;
-    background-image: url(../img/anime04.jpg);
+    background-image: url(../img/anime01.jpg);
     -webkit-animation-delay: 16s;
             animation-delay: 16s;
   }
