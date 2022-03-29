@@ -88,7 +88,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   text-indent: -9999px;
-  background-image: url(../img/sp_anime04.jpg);
+  background-image: url(../img/sp_anime03.jpg);
   -webkit-animation-delay: 16s;
   animation-delay: 16s;
 }
@@ -1357,7 +1357,7 @@ Stylesheet: 1280px以上のモニタで適用
     background-size: 100%;
     background-repeat: no-repeat;
     text-indent: -9999px;
-    background-image: url(../img/anime01.jpg);
+    background-image: url(../img/anime03.jpg);
   }
   .hero .src2 {
     width: 100%;
@@ -1373,7 +1373,7 @@ Stylesheet: 1280px以上のモニタで適用
     background-size: 100%;
     background-repeat: no-repeat;
     text-indent: -9999px;
-    background-image: url(../img/anime04.jpg);
+    background-image: url(../img/anime01.jpg);
     -webkit-animation-delay: 16s;
     animation-delay: 16s;
   }
