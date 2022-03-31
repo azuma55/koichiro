@@ -116,4 +116,22 @@
       display: inline-block;
       padding: 0 1.8rem;
     }
+
+    .more{
+      padding: 1rem;
+      font-size: 1.8rem;
+      width: 20rem;
+      margin: 3rem auto;
+      border: #fff;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+      letter-spacing: 0.1em;
+      background-color: #262626;
+      color: #fff;
+
+    :hover{
+        opacity: 0.5;
+        color: white;
+    }
+  }
   }
