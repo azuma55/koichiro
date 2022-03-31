@@ -1,0 +1,16 @@
+@import 'modules/variables';
+@import 'news/Nbase';
+
+@media (min-width: 1280px) {
+  @import 'breakpoints/_1280up';
+}
+@media (min-width: 849px) {
+  @import 'news/N850up';
+}
+@media (max-width: 480px) {
+  @import 'breakpoints/_480up';
+}
+
+@media print {
+  @import 'breakpoints/print';
+}
