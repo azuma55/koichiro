@@ -5,16 +5,14 @@ html {
 }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
   background: #000;
   color: #b3b3b3;
-  font-family: 'DIN Alternate',YuGothic,'Yu Gothic','Arial',sans-serif;
+  font-family: "DIN Alternate", YuGothic, "Yu Gothic", "Arial", sans-serif;
 }
-
 body.fixed {
   width: 100%;
   height: 100%;
@@ -26,7 +24,6 @@ p {
   font-size: 1.3rem;
   padding-top: 5px;
   text-justify: inter-ideograph;
-  -webkit-font-feature-settings: "palt";
   font-feature-settings: "palt";
   color: #b3b3b3;
   text-align: center;
@@ -96,19 +93,15 @@ ul {
 
 header {
   position: fixed;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   height: 5rem;
   background: rgba(0, 0, 0, 0.7);
   z-index: 3;
 }
-
 header .inner {
   height: inherit;
 }
-
 header h1 {
   font-size: 2rem;
   margin: 2rem 0 0 3.7rem;
@@ -118,7 +111,6 @@ header h1 {
   border-bottom: 1px solid #fff;
   width: 6rem;
 }
-
 header a {
   text-decoration: none;
 }
@@ -140,7 +132,6 @@ footer {
   margin: 7rem 0 14rem;
   text-align: center;
 }
-
 footer small {
   font-size: 1.5rem;
   color: #b3b3b3;
@@ -149,24 +140,22 @@ footer small {
 @media (min-width: 1280px) {
   /******************************************************************
 
-Stylesheet: 1280px以上のモニタで適用
+  Stylesheet: 1280px以上のモニタで適用
 
-******************************************************************/
+  ******************************************************************/
 }
-
-@media all and (min-width: 1280px) and (min-width: 1280px) {
+@media (min-width: 1280px) and (min-width: 1280px) {
   /**.hero{
     .boxString{
       bottom: 20%;
     }
   }**/
-  #news
-.prev-arrow, .next-arrow {
+  #news .prev-arrow,
+.next-arrow {
     margin: 9rem 0;
   }
 }
-
-@media all and (min-width: 849px) and (min-width: 849px) {
+@media (min-width: 849px) and (min-width: 849px) {
   h2 {
     width: 30%;
     margin-bottom: 8rem;
@@ -185,8 +174,6 @@ Stylesheet: 1280px以上のモニタで適用
     display: none;
   }
   header .inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     height: inherit;
   }
@@ -200,18 +187,14 @@ Stylesheet: 1280px以上のモニタで適用
     text-decoration: none;
   }
   /** NEWS **/
+  p {
+    font-size: 1.3rem;
+  }
   ul {
-    -webkit-box-orient: initial;
-    -webkit-box-direction: initial;
-        -ms-flex-direction: initial;
-            flex-direction: initial;
+    flex-direction: initial;
   }
   .news_flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   .cnt_column {
@@ -223,29 +206,28 @@ Stylesheet: 1280px以上のモニタで適用
     padding: 0 2rem;
   }
   /**
-  .cnt_img {
-    .mask {
-      display: flex;
-      position: absolute;
-      justify-content: center;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      opacity: 0;
-      align-items: center;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-    }
+    .cnt_img {
+      .mask {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        align-items: center;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+      }
 
-    &:hover .mask {
-      opacity: 0.8;
-    }
-  }**/
+      &:hover .mask {
+        opacity: 0.8;
+      }
+    }**/
 }
-
-@media all and (max-width: 480px) and (max-width: 480px) {
+@media (max-width: 480px) and (max-width: 480px) {
   .hero .boxString h3 {
     font-size: 1.5rem;
   }
@@ -259,12 +241,10 @@ Stylesheet: 1280px以上のモニタで適用
     margin: 5rem 0;
   }
 }
-
 @media print {
   /******************************************************************
 
-Stylesheet: プリンタのみに適用
+  Stylesheet: プリンタのみに適用
 
-******************************************************************/
-}
-/*# sourceMappingURL=news.css.map */
+  ******************************************************************/
+}/*# sourceMappingURL=news.css.map */
