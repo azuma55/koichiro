@@ -1,0 +1,28 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #b3b3b3;
+  font-family: "DIN Alternate", YuGothic, "Yu Gothic", "Arial", sans-serif;
+}
+body.fixed {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+}
+
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+}
