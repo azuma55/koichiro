@@ -1,41 +1,194 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<!-- ※基本共通設定 -->
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-    <title>東弘一郎 Koichiro Azuma NEWS</title>
-    <meta name="google-site-verification" content="b6U-ZbIW6TGkREEw7bk-5q6BZ1vH_-oVPcxmmr1kUZA" />
-    <meta property="og:title" content="東弘一郎 Koichiro Azuma">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://koichiro-azuma.com">
-    <meta property="og:image" content="https://koichiro-azuma.com/img/ogp.jpg">
-    <meta property="og:site_name" content="Koichiro Azuma(東弘一郎)Official website">
-    <meta property="og:description" content="AZUMA KOICHIRO(東弘一郎)のOfficial Websiteです。">
-    
-<!-- Facebook用設定 -->
-    <meta property="fb:app_id" content="946045459158201" />
-    
-<!-- ※Twitter共通設定 -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Koichiro Azuma(東弘一郎)Official website">
-<meta name="twitter:description" content=" AZUMA KOICHIRO(東弘一郎)のOfficial Websiteです。">
-<meta name="twitter:image" content="https://koichiro-azuma.com/img/ogp.jpg">
-<meta itemprop="image" content="https://koichiro-azuma.com/img/ogp.jpg">
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="AZUMA KOICHIRO(東弘一郎)のOfficial Websiteです。">
-
-<link rel="stylesheet" href="style/normalize.css">
-<link rel="stylesheet" href="style/kobo.css">
-<link rel="shortcut icon" href="img/favicon.ico">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="img/android-chrome-256x256.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="美術家 東弘一郎の制作スタジオです。美術作品の企画、制作のほか、各種金属溶接、機械加工、部品設計を請け負います。">
+    <title>株式会社 あずま工房 公式Webサイト</title>
+    <link rel="stylesheet" href="kobocss/normalize.css">
+    <link rel="stylesheet" href="kobocss/index.css">
 </head>
-
 <body>
-<h1>Coming Soon...</h1>
-</body>
+    <!-- JQueryで読み込み -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/modal-fixed.js"></script>
+    <script src="js/modal-multi.js"></script>
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="js/smooth.js"></script>
+    <script src="js/current.js"></script>
 
+<header>
+    <div class="inner">
+        <div class="flexbox">
+            <h1>あずま工房</h1>
+        </div>
+        <div class="nav_global">
+            <ul class="flexbox">
+                <li><a href="#work"  id="work_link_js" class="link">施工事例</a></li>
+                <li><a href="#process"  id="process_link_js" class="link">ワークフロー</a></li>
+                <li><a href="#contact" id="contact_link_js" class="link">お問い合わせ</a></li>
+                <li><a href="#about"  id="news_link_js" class="link">会社情報</a></li>
+            </ul>
+        </div>
+
+    <!-- ハンバーガーメニュー -->
+    <div class="nav_btn">
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" class="hamburger">
+            <div class="open"></div>
+        </label>
+        <div class="menu menuEffects">
+            <label for="menuToggle"></label>
+        <div class="menucont">
+            <ul>
+                <li><a href="#work" onclick="$('input').prop('checked', false)">施工事例</a></li>
+                <li><a href="#process" onclick="$('input').prop('checked', false)">施工手順</a></li>
+                <li><a href="#contact" onclick="$('input').prop('checked', false)">お問い合わせ</a></li>
+                <li><a href="#about" onclick="$('input').prop('checked', false)">会社情報</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    </div>
+</header>
+
+<div class="all_container">
+        <div class="hero">
+            <div class="hero_img">美術家 東弘一郎の制作スタジオです。</div>
+        </div>
+
+<section class="position-now" id="work">
+        <h2>施工事例</h2>
+        <div class="content">
+        <div class="flex">
+            <div class="work_con">
+                <figcaption><img src="img/work_01.jpg" alt="Chim↑Pom from Smappa！Groupのための、エレベーターの制作"></figcaption>
+                <p>Chim↑Pom from Smappa！Groupのためのエレベーターの制作</p></figure>
+            </div>
+            <div class="work_con">
+                <figcaption><img src="img/work_02.jpg" alt="高級チョコレートブランド、バレンタインイベントのための什器　"></figcaption>
+                <p>高級チョコレートブランド、バレンタインイベントのための什器　</p></figure>
+            </div>
+            <div class="work_con">
+                <figcaption><img src="img/work_03.jpg" alt="ギャラリーのための展示結界の制作"></figcaption>
+                <p>ギャラリーのための展示結界の制作</p></figure>
+            </div>
+            <div class="work_con">
+                <figcaption><img src="img/work_04.jpg" alt="アート作品制作"></figcaption>
+                <p>ピザ窯制作</p></figure>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="position-now" id="process">
+        <h2>ワークフロー</h2>
+        <div class="content">
+            <p>美術作家 東弘一郎が経営する金属加工工場です。<br>
+                溶接加工、旋盤加工、フライス加工中心に小さな工芸品から、展示什器、大型の美術作品まで幅広くどんなものでも制作いたします。<br>
+                また、電子工作を用いた動的な品物の作成も承ります。<br>
+                「こんなものが作れるかどうか？」など、まずはお気軽にお問い合わせください。</p>
+        <ul>
+            <li>打ち合わせ(メール、電話、現地)
+                <p>どんな内容でもお気軽にご相談ください。<br>
+                    スケッチや図面等をご用意ください。
+                </p>
+            </li>
+            <img src="img/arrow.svg" alt="">
+            <li>見積の作成
+                <p>打ち合わせ内容をもとに、納期や見積りのご提案をいたします。<br>
+                    内容によっては現地訪問を行います。</p>
+            </li>
+            <img src="img/arrow.svg" alt="">
+            <li>発注
+                <p>見積完了後、発注書を取り交わし制作に関わります。</p>
+            </li>
+            <img src="img/arrow.svg" alt="">
+            <li>納品
+                <p>工場での引き渡し、配送にて品物を納品します。<br>
+                    必要があれば、設置まで承ります。
+                </p>
+            </li>
+        </ul>
+        </div>
+    </section>
+
+<section class="position-now" id="contact">
+        <h2>お問い合わせ</h2>
+            <div class="content">
+                <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeM2X9o3VUG4d-aWcrpHFH8hiGaW86VlBD-jG2PVgFHL0IETg/formResponse" target="_self" method="POST" id="mG61Hd">               
+                    <dl>
+                        <dt>Name</dt>
+                        <dd><input name="entry.1826431607" type="text" required="required" id="textfield" class="g_form" placeholder="Name"></dd>
+                        <dt><label for="textfield2">Email</label></dt>
+                        <dd><input name="entry.477463285" type="text" required="required" class="g_form" id="textfield1" placeholder="Email"></dd>
+                        <dt>TEL</dt>
+                        <dd><input name="entry.526476052" type="text" required="required" class="g_form" id="textfield2" placeholder="TEL"></dd>
+                        <dt><label for="textfield2">Title</label></dt>
+                        <dd><input name="entry.2112935214" type="text" required="required" class="g_form" id="textfield3" placeholder="Title"></dd>
+                        <dt>Message</dt>
+                        <dd><textarea name="entry.1058165167" required class="g_form_text" id="entry.1276685215" placeholder="Message"></textarea></dd>
+                        <dt>ロボット</dt>
+                        <dd><div class="g-recaptcha" data-callback="validateRecaptcha" data-sitekey="6LdXMhkaAAAAALOWPHPyjlYBk8SV8Ij-e-Z2WNsm"></div></dd>
+                        <dt>送信</dt>
+                        <dd><input type="submit" name="ACMS_POST_Form_Submit" value="SEND" id="btnSubmit" class="recaptcha btn-attention-block-large" disabled /></dd>
+                    </dl>
+                </form>
+            </div>
+    </section>
+
+    <section class="position-now" id="about">
+            <h2>株式会社あずま工房</h2>
+            <div class="column">
+            <dl>
+                <dt>会社名</dt>
+                <dd>株式会社あずま工房　（旧会社名　株式会社海月）<br>
+                    Azumakobo Co.,Ltd.</dd>
+                <dt>代表取締役</dt>
+                <dd>東 弘一郎</dd>
+                <dt>所在地</dt>
+                <dd>〒306-0607　茨城県坂東市弓田2338番地１<br>
+                    TEL.080-1151-6565</dd>
+                <dt>設立</dt>
+                <dd>2019年7月8日</dd>
+                <dt>資本金</dt>
+                <dd>300万円</dd>
+                <dt>業務内容</dt>
+                <dd>美術品の制作、各種金属(鉄、ステンレス、アルミ等) 溶接・切削加工</dd>
+            </dl>
+
+            <!-- <div class="history">
+                <h5>沿革</h5>
+                <dl>
+                    <dt>2019年7月8日</dt>
+                    <dd>江川主民氏と細谷勇斗氏が、スポーツ用品、スポーツ器具、情報デバイス及び電子デバイス等の企画、開発設計、製造及び販売を行うため、東京都文京区に株式会社海月を設立。</dd>
+                    <dt>2021年6月1日</dt>
+                    <dd>東京都荒川区に本店を移転</dd>
+                    <dt>2023年10月4日</dt>
+                    <dd>江川主民氏の渡米に伴い、江川主民氏と細谷勇斗氏は、株式会社海月の株式を東弘一郎と東悦子に譲渡し、商号を株式会社あずま工房に変更。</dd>
+                    <dt>2023年10月6日</dt>
+                    <dd>本店を茨城県坂東市に移転</dd>
+                </dl>
+            </div> !-->
+
+            <div class="IR">
+                <h6>IR情報</h6>
+                <p>決済公告</p>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1x0w_dVwxUI6JkKxJJ1hZtGtCtStGKUHO/view?usp=sharing" target="_blank">2020年4月期（第１期）</a></li>
+                    <li><a href="https://drive.google.com/file/d/1SjfPuBYS1o0scaKzVJyMeUbTHJgSeSZJ/view?usp=sharing" target="_blank">2021年4月期（第２期）</a></li>
+                    <li><a href="https://drive.google.com/file/d/1R5DW1ZNE0A6ia3LEgs_e9ZqTFAFVRox_/view?usp=sharing" target="_blank">2022年4月期（第３期）</a></li>
+                    <li><a href="https://drive.google.com/file/d/1MnI92vba2DIh_42eOkiRVhu7N4oe18R3/view?usp=sharing" target="_blank">2023年4月期（第４期）</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </section>
+</div>
+
+<footer>
+    <p>©︎Azumakobo Co..,Ltd. 2023 </p>
+</footer>
+</body>
 </html>
