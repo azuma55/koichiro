@@ -76,7 +76,7 @@ header{
     margin-left: 2rem;
     height: 6rem;
     width: 5rem;
-    background-image: url(../img/logo.png);
+    background-image: url(../image/logo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -122,35 +122,7 @@ section{
   .hero_img{
     width: 100%;
     height: 100%;
-    background-image: url(../img/hero_img.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    text-indent: -9999px;
-  }
-
-}
-
-.price{
-  position: relative;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: calc(2100 / 748 * 100vw);
-  overflow: hidden;
-
-  .price_img01{
-    width: 100%;
-    height: calc(1050 / 748 * 100vw);
-    background-image: url(../img/price_top.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    text-indent: -9999px;
-  }
-
-  .price_img02{
-    width: 100%;
-    height: calc(1050 / 748 * 100vw);
-    background-image: url(../img/price_bottom.jpg);
+    background-image: url(../image/hero_img.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     text-indent: -9999px;
@@ -165,20 +137,6 @@ footer{
   .column{
     text-align: center;
     margin-bottom: 2rem;
-  }
-
-  h5{
-    background-image: url(../img/h5_01.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    margin: auto;
-    padding: 3.5rem 0;
-    width: 27rem;
-    height: 3rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-indent: -9999px;
   }
 
   dl{
