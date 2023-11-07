@@ -1,0 +1,72 @@
+#about{
+    h2{
+        font-size: 2.3rem;
+        letter-spacing: 0.2em;
+        width: 25rem;
+        margin: 0 auto 3rem;
+        border-bottom: 1px solid #999;
+    }
+
+    .column{
+        margin: auto;
+    }
+    
+    dl{
+        margin: 0 2rem 3rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    dt{
+        width: 20%;
+    }
+
+    dd{
+        width: 80%;
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+
+    .history{
+        h5{
+            font-size: 2.3rem;
+            letter-spacing: 0.2em;
+            width: 5.6rem;
+            margin: 0 auto 3rem;
+            border-bottom: 1px solid #999;
+        }
+
+        dt{
+            width: 30%;
+        }
+
+        dd{
+            width: 70%;
+        }
+    }
+
+    .IR{
+        h6{
+            font-size: 2.3rem;
+            letter-spacing: 0.2em;
+            width: 8.7rem;
+            margin: 0 auto 3rem;
+            border-bottom: 1px solid #999;
+        }
+
+        p{
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        ul{
+            text-align: center;
+        }
+
+        li{
+            font-size: 1.3rem;
+            text-decoration: underline;
+            padding-bottom: 1rem;
+        }
+    }
+}
